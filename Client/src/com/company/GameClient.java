@@ -5,12 +5,11 @@ import java.util.Scanner;
 
 public class GameClient {
     String ipAddres;
+    String name;
 
     void AskQuestion() {
         java.util.Scanner in = new Scanner(System.in);
-        String name = in.next();
-        
-        System.out.println(name);
+        name = in.next();
     }
 
 }
