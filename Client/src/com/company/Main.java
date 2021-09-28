@@ -21,7 +21,7 @@ public class Main {
         }
         System.out.println("\n");
 
-        for (int j = 0; j < userList.length; j++) {
+        for (int j = 0; j < userList.length; j++) {//uses another for loop for printing the data for each User in the userList
         System.out.println(userList[j].getUserName()+ ": " + userList[j].getPoints());
     }
         //prints out all user object in the array
