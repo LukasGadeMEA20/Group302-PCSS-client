@@ -26,14 +26,5 @@ public class Prompt {
             //System.out.println(prompts[randomPrompt].toString());
         }
     }
-    public void askPrompt(){
-        System.out.print(randomPrompt);
-        java.util.Scanner in = new Scanner(System.in);
-        answer = in.next();
-    }
-    public void setAnswer(String answer) { //sets the username of a user
-        this.answer = answer;
-    }
-
 }
 
