@@ -8,6 +8,7 @@ public class User {
     float afkTimer;
     boolean ready;
 
+
     public void setUserName(String userName) { //sets the username of a user
         this.userName = userName;
     }
@@ -20,5 +21,4 @@ public class User {
     public int getPoints() { //gets the points of a user
         return this.points;
     }
-
 }

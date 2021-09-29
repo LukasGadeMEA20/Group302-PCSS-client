@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         GameClient g = new GameClient();
+        Prompt prompt = new Prompt();
         User u = new User();
         int sizeOfArr=3;
         ArrayList<User>userlist=new ArrayList<User>(sizeOfArr); //Declares the arraylist with all the users as objects
@@ -18,6 +19,8 @@ public class Main {
             userlist.add(new User());
             g.askName();
             userlist.get(i).setUserName(g.name);
+            prompt.askPrompt();
+            prompt.setAnswer(prompt.answer);
             g.askPoints();
             userlist.get(i).setPoints(g.nextInt);
 
