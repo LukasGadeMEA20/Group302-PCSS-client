@@ -18,8 +18,7 @@ public class Prompt {
     Random random=new Random();
     int min=1;
     int max=2;
-    
-    
+
     public void choosePrompt() {
         for (int i = 1; i <= 10; i++) {
             int randomNum = random.nextInt(prompts.length);
@@ -35,7 +34,6 @@ public class Prompt {
     public void setAnswer(String answer) { //sets the username of a user
         this.answer = answer;
     }
-    }
 
-
+}
 
