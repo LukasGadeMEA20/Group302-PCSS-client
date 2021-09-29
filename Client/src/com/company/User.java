@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class User {
@@ -12,6 +13,12 @@ public class User {
 
     String randomPrompt;
     String answer;
+    Random random=new Random();
+
+    String prompt1 = "Tell a funny joke!";
+    String prompt2 = "I was afraid of (blank)";
+
+    String[] prompts = {prompt1, prompt2};
 
     public void setUserName(String userName) { //sets the username of a user
         this.userName = userName;
@@ -41,5 +48,11 @@ public class User {
 
     public String getAnswer() { //sets the username of a user
         return this.answer;
+    }
+    public void choosePrompt() {
+        int randomNum = random.nextInt(prompts.length);
+        randomPrompt = prompts[randomNum].toString();
+        //System.out.println(prompts[randomPrompt].toString());
+
     }
 }
