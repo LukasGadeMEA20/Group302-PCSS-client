@@ -20,7 +20,7 @@ public class Main {
             userlist.add(new User());
             g.askName();
             userlist.get(i).setUserName(g.name);
-            prompt.choosePrompt();
+            u.choosePrompt();
             u.writeAnswer();
             userlist.get(i).setAnswer((u.answer));
             g.askPoints();
