@@ -13,6 +13,8 @@ public class Main {
         Prompt p=new Prompt();
 
         p.choosePrompt();
+        p.askPrompt();
+        System.out.println("\n");
 
         for (int i = 0; i < 3; i++) {   //for loop for input of credentials for the specific user object
             userlist.add(new User());

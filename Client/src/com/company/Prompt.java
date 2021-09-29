@@ -13,27 +13,28 @@ public class Prompt {
 
     String randomPrompt;
 
-//<<<<<<< HEAD
-    Random random=new Random();
-    int min=1;
-    int max=2;
-    
-    
+    //<<<<<<< HEAD
+    Random random = new Random();
+    int min = 1;
+    int max = 2;
+
+
     public void choosePrompt() {
-        for(int i = 1; i <=10; i++) {
+        for (int i = 1; i <= 10; i++) {
             int randomNum = random.nextInt(prompts.length);
-            randomPrompt=prompts[randomNum].toString();
+            randomPrompt = prompts[randomNum].toString();
             //System.out.println(prompts[randomPrompt].toString());
         }
 
 
+    }
 
-    public void askPrompt(){
+    public void askPrompt() {
         System.out.print(randomPrompt);
         java.util.Scanner in = new Scanner(System.in);
-        name = in.next();
+        //name = in.next();
     }
-    }
-
-
 }
+
+
+
