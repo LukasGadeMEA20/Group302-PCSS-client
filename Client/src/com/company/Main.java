@@ -9,14 +9,14 @@ public class Main {
         GameClient g = new GameClient();
         Prompt prompt = new Prompt();
         User u = new User();
-        int sizeOfArr=3;
-        ArrayList<User>userlist=new ArrayList<User>(sizeOfArr); //Declares the arraylist with all the users as objects
+        int numOfPlayers=1;
+        ArrayList<User>userlist=new ArrayList<User>(numOfPlayers); //Declares the arraylist with all the users as objects
 
 
 
         System.out.println("\n");
 
-        for (int i = 0; i < 3; i++) {   //for loop for input of credentials for the specific user object
+        for (int i = 0; i < numOfPlayers; i++) {   //for loop for input of credentials for the specific user object
             userlist.add(new User());
             g.askName();
             userlist.get(i).setUserName(g.name);
@@ -29,7 +29,7 @@ public class Main {
         }
         System.out.println("\n");
 
-        for (int j = 0; j < 3; j++) {//uses another for loop for printing the data for each User in the userList
+        for (int j = 0; j < numOfPlayers; j++) {//uses another for loop for printing the data for each User in the userList
         System.out.println(userlist.get(j).getUserName()+ ": " + userlist.get(j).getAnswer() + " worth: " + userlist.get(j).getPoints());
     }
 
