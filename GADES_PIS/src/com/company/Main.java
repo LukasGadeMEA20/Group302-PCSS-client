@@ -13,12 +13,14 @@ public class Main {
         boolean connect = true;
 
         try {
-            Socket connectToServer = new Socket("192.168.129.181", 12345);
+            Socket connectToServer = new Socket("localHost", 12345);
 
             DataInputStream input = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
             while(connect){
-                System.out.println("Enter username");
+                String prompt = input.readUTF();
+                System.out.println(prompt);
+                System.out.println("Enter your answer");
                 String userName = scannerInput.next();
 
                 output.writeUTF(userName);
