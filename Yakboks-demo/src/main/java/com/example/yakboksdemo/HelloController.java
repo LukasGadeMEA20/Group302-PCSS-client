@@ -6,10 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
-    private Label l;
-    private Label b;
     @FXML private TextField input;
     @FXML private Label output;
     @FXML

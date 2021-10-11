@@ -8,6 +8,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <ToggleButton mnemonicParsing="false" text="ToggleButton" />
     <TextField id="input" fx:id="input" layoutX="120.0" layoutY="64.0" onAction="#onHelloButtonClick" promptText="Type somthing..." />
 
     <Label id="output" fx:id="output" text="This will be output if there is any..." />
