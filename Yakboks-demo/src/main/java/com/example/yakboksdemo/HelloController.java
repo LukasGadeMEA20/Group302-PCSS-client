@@ -26,7 +26,6 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
-        //output.setText(input.getText());
         System.out.println(input.getText());
         Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
