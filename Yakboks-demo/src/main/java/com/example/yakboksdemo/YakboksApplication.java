@@ -29,10 +29,10 @@ public class YakboksApplication extends Application {
         button1.setOnAction(e -> primaryStage.setScene(scene2));
         VBox layout1 = new VBox(20);
         layout1.getChildren().addAll(label1, button1);
-        scene1= new Scene(layout1, 300, 250);
+        scene1= new Scene(layout1, 1920, 1080);
 
             FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("scene1.fxml"));
-            Scene scene1 = new Scene(fxmlLoader.load(), 320, 240);
+            Scene scene1 = new Scene(fxmlLoader.load(), 1920, 1080);
             primaryStage.setTitle("YakBoks!");
             primaryStage.setScene(scene1);
             primaryStage.show();
@@ -46,7 +46,7 @@ public class YakboksApplication extends Application {
         button2.setOnAction(e -> primaryStage.setScene(scene1));
         VBox layout2= new VBox(20);
         layout2.getChildren().addAll(label2, button2);
-        scene2= new Scene(layout2,300,250);
+        scene2= new Scene(layout2,1920,1080);
 
 
         primaryStage.setScene(scene1);
