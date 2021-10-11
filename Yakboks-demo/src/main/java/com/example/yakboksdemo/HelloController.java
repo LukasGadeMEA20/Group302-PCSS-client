@@ -21,7 +21,8 @@ public class HelloController {
     private TextField input;
     @FXML
     private Label output;
-    //private Object Node;
+
+    //Makes an event so that each time you click the button, it will switch to the other scene/page
 
     @FXML
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
