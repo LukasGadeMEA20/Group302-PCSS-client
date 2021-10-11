@@ -52,7 +52,7 @@ public class YakboksApplication extends Application {
         primaryStage.setScene(scene1);
         primaryStage.show();
 
-
+        //Closes the window with esc button
         primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
             if (KeyCode.ESCAPE == event.getCode()) {
                 primaryStage.close();
