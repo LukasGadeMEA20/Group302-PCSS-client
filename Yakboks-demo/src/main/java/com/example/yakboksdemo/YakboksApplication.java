@@ -1,16 +1,16 @@
 package com.example.yakboksdemo;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.awt.event.KeyListener;
 import java.io.IOException;
 
 public class YakboksApplication extends Application {
@@ -53,6 +53,11 @@ public class YakboksApplication extends Application {
         primaryStage.show();
 
 
+        primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                primaryStage.close();
+            }
+        });
     }
 
     public static void main(String[] args) {
