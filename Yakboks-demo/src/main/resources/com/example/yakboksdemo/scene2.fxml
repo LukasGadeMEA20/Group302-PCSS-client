@@ -13,5 +13,5 @@
 
     <Label id="output" fx:id="output" text="This will be output if there is any..." />
     <CheckBox mnemonicParsing="false" text="CheckBox" />
-    <Button onAction="#onHelloButtonClick" text="Go to scene 2" />
+    <Button onAction="#onHelloButtonClick" text="Go to scene 1" />
 </VBox>
