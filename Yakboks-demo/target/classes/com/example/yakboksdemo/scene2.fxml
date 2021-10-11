@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="397.0" prefWidth="417.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yakboksdemo.HelloController">
+<VBox alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yakboksdemo.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -13,5 +13,5 @@
 
     <Label id="output" fx:id="output" text="This will be output if there is any..." />
     <CheckBox mnemonicParsing="false" text="CheckBox" />
-    <Button onAction="#onHelloButtonClick" text="Go to scene 1" />
+    <Button onAction="#onHelloButtonClick2" text="Go to scene 1" />
 </VBox>

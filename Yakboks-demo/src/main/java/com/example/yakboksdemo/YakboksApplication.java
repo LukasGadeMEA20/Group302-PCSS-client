@@ -33,7 +33,7 @@ public class YakboksApplication extends Application {
 
             FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("scene1.fxml"));
             Scene scene1 = new Scene(fxmlLoader.load(), 320, 240);
-            primaryStage.setTitle("Page switcher");
+            primaryStage.setTitle("YakBoks!");
             primaryStage.setScene(scene1);
             primaryStage.show();
 

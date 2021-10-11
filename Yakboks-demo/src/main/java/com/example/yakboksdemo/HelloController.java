@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class HelloController {
     @FXML
     private TextField input;
     @FXML
@@ -34,6 +34,12 @@ public class HelloController implements Initializable {
         app_stage.show();
     }
 
-    public void initialize(URL url, ResourceBundle rb) {
+    public void onHelloButtonClick2(ActionEvent event) throws IOException {
+        System.out.println(input.getText());
+        Parent scene_1_parent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+        Scene scene1 = new Scene(scene_1_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene1);
+        app_stage.show();
     }
 }
