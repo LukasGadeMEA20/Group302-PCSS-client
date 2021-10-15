@@ -19,13 +19,13 @@ public class Main {
             DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
             while(connect){
                 String prompt = input.readUTF();
-                System.out.println(prompt);
-                System.out.println("Enter your answer");
-                String userName = scannerInput.nextLine();
+                //System.out.println(prompt);
+                //System.out.println("Enter your answer");
+                //String userName = scannerInput.nextLine();
 
-                output.writeUTF(userName);
+                //output.writeUTF(userName);
 
-                output.flush();
+                //output.flush();
                 /*System.out.print("Enter annual interest rate: ");
                 double annualInterestRate = scannerInput.nextDouble();
 
