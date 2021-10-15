@@ -19,7 +19,7 @@ public class Main {
             DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
             while(connect){
                 String prompt = input.readUTF();
-                //System.out.println(prompt);
+                System.out.println(prompt);
                 //System.out.println("Enter your answer");
                 //String userName = scannerInput.nextLine();
 
