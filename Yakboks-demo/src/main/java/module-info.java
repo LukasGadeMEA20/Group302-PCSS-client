@@ -5,6 +5,7 @@ module com.example.yakboksdemo {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens com.example.yakboksdemo to javafx.fxml;
     exports com.example.yakboksdemo;
