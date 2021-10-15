@@ -13,7 +13,7 @@ public class Main {
         boolean connect = true;
 
         try {
-            Socket connectToServer = new Socket("localHost", 12345);
+            Socket connectToServer = new Socket("localHost", 302);
 
             DataInputStream input = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
@@ -21,7 +21,7 @@ public class Main {
                 String prompt = input.readUTF();
                 System.out.println(prompt);
                 System.out.println("Enter your answer");
-                String userName = scannerInput.next();
+                String userName = scannerInput.nextLine();
 
                 output.writeUTF(userName);
 
