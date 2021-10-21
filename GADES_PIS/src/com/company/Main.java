@@ -15,10 +15,32 @@ public class Main {
         try {
             Socket connectToServer = new Socket("localHost", 302);
 
-            DataInputStream input = new DataInputStream(connectToServer.getInputStream());
-            DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
+            DataInputStream fromServer = new DataInputStream(connectToServer.getInputStream());
+            DataOutputStream toServer = new DataOutputStream(connectToServer.getOutputStream());
+
             while(connect){
-                String prompt = input.readUTF();
+                int state = fromServer.readInt();
+                switch(state){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        System.out.println(fromServer.readUTF());
+                        System.out.println(fromServer.readUTF());
+                        toServer.writeInt(scannerInput.nextInt());
+                        break;
+                    case 3:
+                        fromServer.readUTF();
+                        System.out.println("Write a funny answer for the prompt!");
+                        toServer.writeUTF(scannerInput.nextLine());
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                }
+                String prompt = fromServer.readUTF();
                 System.out.println(prompt);
                 //System.out.println("Enter your answer");
                 //String userName = scannerInput.nextLine();
