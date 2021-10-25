@@ -13,7 +13,7 @@ public class Main {
         boolean connect = true;
 
         try {
-            Socket connectToServer = new Socket("localHost", 302);
+            Socket connectToServer = new Socket("localhost", 8000);
 
             DataInputStream fromServer = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream toServer = new DataOutputStream(connectToServer.getOutputStream());
@@ -22,8 +22,10 @@ public class Main {
                 int state = fromServer.readInt();
                 switch(state){
                     case 0:
+                        System.out.println("Hi");
                         break;
                     case 1:
+                        System.out.println("Goodbye");
                         break;
                     case 2:
                         System.out.println(fromServer.readUTF());
@@ -31,8 +33,7 @@ public class Main {
                         toServer.writeInt(scannerInput.nextInt());
                         break;
                     case 3:
-                        fromServer.readUTF();
-                        System.out.println("Write a funny answer for the prompt!");
+                        System.out.println("Write a funny answer for the prompt: \n" + fromServer.readUTF());
                         toServer.writeUTF(scannerInput.nextLine());
                         break;
                     case 4:
@@ -40,39 +41,19 @@ public class Main {
                     case 5:
                         break;
                 }
-                String prompt = fromServer.readUTF();
-                System.out.println(prompt);
+                //String prompt = fromServer.readUTF();
+                //System.out.println(prompt);
                 //System.out.println("Enter your answer");
                 //String userName = scannerInput.nextLine();
 
                 //output.writeUTF(userName);
 
                 //output.flush();
-                /*System.out.print("Enter annual interest rate: ");
-                double annualInterestRate = scannerInput.nextDouble();
-
-                System.out.print("Enter an amount of years: ");
-                int numberOfYears = scannerInput.nextInt();
-
-                System.out.print("Enter loan amount: ");
-                double loan = scannerInput.nextDouble();
-
-                output.writeDouble(annualInterestRate);
-                output.writeInt(numberOfYears);
-                output.writeDouble(loan);
-                output.flush();
-
-                double monthlyPayment = input.readDouble();
-                double totalPayment = input.readDouble();
-
-                System.out.println("Annual interest rate: " + annualInterestRate
-                               + "\nNumber of years: " + numberOfYears
-                               + "\nLoan amount: " + loan);
-
-                System.out.println("Monthly payment: " + monthlyPayment
-                                 + "\nTotal payment: " + totalPayment);*/
 
                 System.out.print("Do you wish to continue with a new set of values? ");
+
+                toServer.writeInt(0);
+
                 if(scannerInput.next().equals("no")){
                     connect = false;
                 }
