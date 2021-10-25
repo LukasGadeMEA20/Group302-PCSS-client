@@ -13,7 +13,7 @@ public class Main {
         boolean connect = true;
 
         try {
-            Socket connectToServer = new Socket("localHost", 302);
+            Socket connectToServer = new Socket("172.20.10.2", 302);
 
             DataInputStream input = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream output = new DataOutputStream(connectToServer.getOutputStream());
