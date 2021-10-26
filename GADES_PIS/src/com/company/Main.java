@@ -26,7 +26,6 @@ public class Main {
                         toServer.writeInt(scannerInput.nextInt());
                         break;
                     case 1:
-                        System.out.println("Goodbye");
                         break;
                     case 2:
                         System.out.println(fromServer.readUTF());
