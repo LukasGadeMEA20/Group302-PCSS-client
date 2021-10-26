@@ -22,7 +22,8 @@ public class Main {
                 int state = fromServer.readInt();
                 switch(state){
                     case 0:
-                        System.out.println("Hi");
+                        System.out.println("Write '0' when everyone is ready.");
+                        toServer.writeInt(scannerInput.nextInt());
                         break;
                     case 1:
                         System.out.println("Goodbye");
@@ -54,9 +55,9 @@ public class Main {
 
                 toServer.writeInt(0);
 
-                if(scannerInput.next().equals("no")){
+                /*if(scannerInput.next().equals("no")){
                     connect = false;
-                }
+                }*/
             }
             scannerInput.close();
             connectToServer.close();
