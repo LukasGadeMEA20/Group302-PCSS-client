@@ -19,15 +19,7 @@ import java.util.ResourceBundle;
 
 public class Scene7Controller implements Initializable {
     @FXML
-    public TextField input;
-    @FXML
     public Label labelUsername;
-    @FXML
-    public Label label3;
-    @FXML
-    public boolean Login;
-    @FXML
-    public Label label4;
 
 
 
