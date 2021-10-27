@@ -17,10 +17,10 @@
             <Font size="22.0" />
          </font>
       </Label>
-       <TextField id="textField1" fx:id="input" onAction="#onHelloButtonClick" promptText="Type somthing..." AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="700.0" />
+       <TextField id="textField1" fx:id="input" onAction="#onHelloButtonClick" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="700.0" />
        <Button layoutX="850.0" layoutY="749.0" onAction="#onHelloButtonClick" text="Continue" AnchorPane.leftAnchor="850.0" AnchorPane.rightAnchor="850.0" AnchorPane.topAnchor="749.0" />
-      <Button fx:id="button3" layoutX="724.0" layoutY="749.0" mnemonicParsing="false" onAction="#onHelloButtonClick4" text="Button" />
-      <Label fx:id="label2" layoutX="631.0" layoutY="563.0" textFill="WHITE">
+      <Button fx:id="button3" layoutX="724.0" layoutY="749.0" mnemonicParsing="false" onAction="#onHelloButtonClick4" text="Check username" />
+      <Label fx:id="labelUsername" layoutX="631.0" layoutY="563.0" textFill="WHITE">
          <font>
             <Font size="44.0" />
          </font>
@@ -28,6 +28,16 @@
       <Label layoutX="725.0" layoutY="103.0" prefHeight="134.0" prefWidth="470.0" text="WELCOME TO YAKBOKS!" textFill="WHITE">
          <font>
             <Font size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="label3" layoutX="1081.0" layoutY="698.0" prefHeight="127.0" prefWidth="797.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="label4" layoutX="1091.0" layoutY="708.0" prefHeight="127.0" prefWidth="797.0" textFill="#00ff04" wrapText="true">
+         <font>
+            <Font size="35.0" />
          </font>
       </Label>
    </children>

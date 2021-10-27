@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fdd175d-de4f-46e6-b0ff-9a1f7594d29b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../GADES_PIS/out/production/GADES_PIS/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GADES_PIS/out/production/GADES_PIS/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GADES_PIS/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GADES_PIS/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene2Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene3Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene4Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene5Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene6Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene7Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/YakboksApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/YakboksApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene5.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene5.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene6.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene7.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene7.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,6 +93,8 @@
       <updated>1633685929628</updated>
       <workItem from="1634731692030" duration="8159000" />
       <workItem from="1635079467916" duration="7785000" />
+      <workItem from="1635247031028" duration="6975000" />
+      <workItem from="1635333113847" duration="5926000" />
     </task>
     <servers />
   </component>
@@ -101,6 +112,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
