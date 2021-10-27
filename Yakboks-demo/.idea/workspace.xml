@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fdd175d-de4f-46e6-b0ff-9a1f7594d29b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene3Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene4Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene5Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene5Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene6Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene6Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene7Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene7Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene2Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene3Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene3Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene4Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene4Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene5Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene5Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene6Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene6Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene7Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene7Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +79,7 @@
       <workItem from="1634731692030" duration="8159000" />
       <workItem from="1635079467916" duration="7785000" />
       <workItem from="1635247031028" duration="6975000" />
-      <workItem from="1635333113847" duration="6249000" />
+      <workItem from="1635333113847" duration="6882000" />
     </task>
     <servers />
   </component>
