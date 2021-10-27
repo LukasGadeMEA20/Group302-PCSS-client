@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class Scene1Controller implements Initializable {
     @FXML
     public TextField input;
     @FXML
@@ -50,10 +50,10 @@ public class HelloController implements Initializable {
             label3.setText("Please type in a username");
         }
 
-        }
+    }
 
 
-   //samme kode igennem til at skifte side.
+    //samme kode igennem til at skifte side.
     public void onHelloButtonClick2(ActionEvent event) throws IOException {
         Parent scene_1_parent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
         Scene scene1 = new Scene(scene_1_parent);
