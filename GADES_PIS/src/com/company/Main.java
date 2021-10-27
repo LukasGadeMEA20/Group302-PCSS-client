@@ -34,7 +34,9 @@ public class Main {
                         break;
                     case 3:
                         System.out.println("Write a funny answer for the prompt: \n" + fromServer.readUTF());
-                        toServer.writeUTF(scannerInput.nextLine());
+                        String test = scannerInput.nextLine();
+                        System.out.println(test);
+                        toServer.writeUTF(test);
                         break;
                     case 4:
                         break;
@@ -48,9 +50,9 @@ public class Main {
 
                 //output.writeUTF(userName);
 
-                //output.flush();
+                toServer.flush();
 
-                System.out.print("Do you wish to continue with a new set of values? ");
+                //System.out.print("Do you wish to continue with a new set of values? ");
 
                 toServer.writeInt(0);
 
