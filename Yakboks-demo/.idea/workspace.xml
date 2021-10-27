@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6fdd175d-de4f-46e6-b0ff-9a1f7594d29b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene1.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <workItem from="1634731692030" duration="8159000" />
       <workItem from="1635079467916" duration="7785000" />
       <workItem from="1635247031028" duration="6975000" />
-      <workItem from="1635333113847" duration="6882000" />
+      <workItem from="1635333113847" duration="7636000" />
     </task>
     <servers />
   </component>

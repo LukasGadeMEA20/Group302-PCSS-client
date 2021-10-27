@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.Parent;
@@ -28,6 +29,8 @@ public class HelloController implements Initializable {
     public boolean Login;
     @FXML
     public Label label4;
+    @FXML
+    public Button continue1;
 
 
     //Makes an event so that each time you click the button, it will switch to the other scene/page
@@ -70,6 +73,7 @@ public class HelloController implements Initializable {
             label3.setText("");
             label4.setText("username valid");
             Data.username = input.getText();
+            continue1.setVisible(true);
         }
     }
 
