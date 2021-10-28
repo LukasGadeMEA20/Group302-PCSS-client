@@ -99,10 +99,3 @@ public class Scene1Controller implements Initializable {
         }
     }
 }
-
-
-
-
-
-
-//husk navn på tværs af alle scener. også at man ikke kan have samme username to personer skal den også tjekke.
