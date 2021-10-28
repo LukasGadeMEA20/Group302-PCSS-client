@@ -39,6 +39,7 @@ public class Main {
                         toServer.writeUTF(test);
                         break;
                     case 4:
+                        System.out.println(fromServer.readUTF());
                         break;
                     case 5:
                         break;
