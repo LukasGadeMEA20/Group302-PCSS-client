@@ -24,12 +24,15 @@ public class Main {
                     case 0:
                         System.out.println("Write '0' when everyone is ready.");
                         toServer.writeInt(scannerInput.nextInt());
+                        toServer.flush();
                         break;
                     case 1:
+                        System.out.println("You are connected to the server");
                         break;
                     case 2:
                         System.out.println(fromServer.readUTF());
                         System.out.println(fromServer.readUTF());
+                        toServer.flush();
                         toServer.writeInt(scannerInput.nextInt());
                         break;
                     case 3:
@@ -40,8 +43,6 @@ public class Main {
                         break;
                     case 4:
                         System.out.println(fromServer.readUTF());
-                        break;
-                    case 5:
                         break;
                 }
                 //String prompt = fromServer.readUTF();
@@ -55,7 +56,7 @@ public class Main {
 
                 //System.out.print("Do you wish to continue with a new set of values? ");
 
-                toServer.writeInt(0);
+                //toServer.writeInt(0);
 
                 /*if(scannerInput.next().equals("no")){
                     connect = false;
