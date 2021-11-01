@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Yakboks-demo" target="17" />
+      <module name="Yakboks-demo" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

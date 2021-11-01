@@ -25,7 +25,11 @@ public class Scene2Controller implements Initializable {
 
     @FXML
 
-    public void onHelloButtonClick5(ActionEvent event) throws IOException {
+    public void onJoinGameClick(ActionEvent event) throws IOException {
+        new Thread(
+            new ClientRunnable(Data.username)
+        ).start();
+
         Parent scene_3_parent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
         Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -33,11 +37,11 @@ public class Scene2Controller implements Initializable {
         app_stage.show();
     }
 
-    public void onHelloButtonClick3(ActionEvent event) {
+    public void onExitGameClick(ActionEvent event) {
         System.exit(1);
     }
 
-    public void onHelloButtonClick6(ActionEvent event) throws IOException {
+    public void onHowToPlayClick(ActionEvent event) throws IOException {
         Parent scene_4_parent = FXMLLoader.load(getClass().getResource("scene4.fxml"));
         Scene scene4 = new Scene(scene_4_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

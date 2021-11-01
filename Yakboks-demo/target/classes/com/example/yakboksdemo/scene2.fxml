@@ -25,7 +25,7 @@
             <Font size="37.0" />
          </font>
       </Label>
-      <Button graphicTextGap="0.0" layoutX="1395.0" layoutY="117.0" mnemonicParsing="false" onAction="#onHelloButtonClick3" prefHeight="62.0" prefWidth="259.0" text="Exit game" textAlignment="CENTER" AnchorPane.leftAnchor="1395.0" AnchorPane.topAnchor="117.0">
+      <Button graphicTextGap="0.0" layoutX="1395.0" layoutY="117.0" mnemonicParsing="false" onAction="#onExitGameClick" prefHeight="62.0" prefWidth="259.0" text="Exit game" textAlignment="CENTER" AnchorPane.leftAnchor="1395.0" AnchorPane.topAnchor="117.0">
          <font>
             <Font size="34.0" />
          </font>
@@ -37,7 +37,7 @@
          <font>
             <Font size="30.0" />
          </font></Label>
-      <Button layoutX="626.0" layoutY="558.0" mnemonicParsing="false" onAction="#onHelloButtonClick5" prefHeight="111.0" prefWidth="259.0" text="Join lobby" textAlignment="CENTER" AnchorPane.bottomAnchor="410.8" AnchorPane.leftAnchor="626.0" AnchorPane.rightAnchor="1034.8" AnchorPane.topAnchor="558.0">
+      <Button layoutX="626.0" layoutY="558.0" mnemonicParsing="false" onAction="#onJoinGameClick" prefHeight="111.0" prefWidth="259.0" text="Join lobby" textAlignment="CENTER" AnchorPane.bottomAnchor="410.8" AnchorPane.leftAnchor="626.0" AnchorPane.rightAnchor="1034.8" AnchorPane.topAnchor="558.0">
          <font>
             <Font size="23.0" />
          </font>
@@ -45,7 +45,7 @@
             <ColorAdjust hue="1.0" saturation="0.6" />
          </effect>
       </Button>
-      <Button layoutX="1049.0" layoutY="558.0" mnemonicParsing="false" onAction="#onHelloButtonClick6" prefHeight="111.0" prefWidth="259.0" text="How to play">
+      <Button layoutX="1049.0" layoutY="558.0" mnemonicParsing="false" onAction="#onHowToPlayClick" prefHeight="111.0" prefWidth="259.0" text="How to play">
          <font>
             <Font size="23.0" />
          </font>

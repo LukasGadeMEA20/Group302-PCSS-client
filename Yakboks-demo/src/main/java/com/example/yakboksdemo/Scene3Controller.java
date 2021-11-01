@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
@@ -20,17 +22,19 @@ import java.util.ResourceBundle;
 public class Scene3Controller implements Initializable {
     @FXML
     public Label labelUsername;
-
-
+    public Button continueHostButton;
+    public ListView<String> myListView;
 
     @FXML
-
     public void onHelloButtonClick7(ActionEvent event) throws IOException {
-        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
-        Scene scene5 = new Scene(scene_5_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene5);
-        app_stage.show();
+        if(Data.isHost) {
+            Data.lobbyChoice = 0;
+            Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+            Scene scene5 = new Scene(scene_5_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            app_stage.setScene(scene5);
+            app_stage.show();
+        }
     }
 
     public void onHelloButtonClick5(ActionEvent event) throws IOException {
@@ -55,14 +59,24 @@ public class Scene3Controller implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         if (Data.username.equals("")){
             labelUsername.setText("");
         }
-        else{
+        else {
             labelUsername.setText(Data.username);
-
         }
 
+        if(Data.isHost){
+            continueHostButton.setVisible(true);
+        } else {
+            continueHostButton.setVisible(false);
+        }
+
+        Data.lobbyChoice = 1;
+        new Thread(
+            new LobbyRefresher(myListView)
+        ).start();
     }
 }
 
