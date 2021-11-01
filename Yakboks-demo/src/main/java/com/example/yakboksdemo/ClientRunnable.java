@@ -23,7 +23,7 @@ public class ClientRunnable implements Runnable {
         String prompt;
 
         try {
-            Socket connectToServer = new Socket("localhost", 8000);
+            Socket connectToServer = new Socket("192.168.222.181", 8000);
 
             DataInputStream fromServer = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream toServer = new DataOutputStream(connectToServer.getOutputStream());
@@ -83,6 +83,7 @@ public class ClientRunnable implements Runnable {
                         break;
                 }
                 toServer.flush();
+                Data.connected = true;
             }
             scannerInput.close();
             connectToServer.close();

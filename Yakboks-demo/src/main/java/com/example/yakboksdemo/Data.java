@@ -16,4 +16,6 @@ public class Data {
     public static int lobbyChoice = -1;
 
     public static boolean isHost = false;
+
+    public static boolean connected = false;
 }
