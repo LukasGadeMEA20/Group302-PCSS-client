@@ -1,5 +1,8 @@
 package com.example.yakboksdemo;
 
+import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,9 +77,19 @@ public class Scene3Controller implements Initializable {
         }
 
         Data.lobbyChoice = 1;
-        new Thread(
-            new LobbyRefresher(myListView)
-        ).start();
+
+        System.out.println("fuck");
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                //while(Data.lobbyChoice != 0) {
+                    myListView.getItems().setAll(Data.userNamesForList);
+                    //listView = new ListView<>(Data.userNamesForList);
+                    //System.out.println(listView.getItems());
+                //}
+            }
+        });
     }
 }
 

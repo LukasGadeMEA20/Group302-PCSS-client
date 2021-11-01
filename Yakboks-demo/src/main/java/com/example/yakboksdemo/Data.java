@@ -1,5 +1,8 @@
 package com.example.yakboksdemo;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 public class Data {
@@ -8,6 +11,7 @@ public class Data {
     public static String kort = " is a really good excuse to take a break ";
 
     public static ArrayList<String> userNames = new ArrayList<String>();
+    public static ObservableList<String> userNamesForList = FXCollections.observableArrayList();
 
     public static int lobbyChoice = -1;
 

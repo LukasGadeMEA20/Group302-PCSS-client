@@ -1,5 +1,7 @@
 package com.example.yakboksdemo;
 
+import javafx.collections.FXCollections;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -45,6 +47,7 @@ public class ClientRunnable implements Runnable {
                             for(int i = 0; i < temp; i++){
                                 Data.userNames.add(fromServer.readUTF());
                             }
+                            Data.userNamesForList = FXCollections.observableArrayList(Data.userNames);
                         }
 
                         break;
