@@ -17,13 +17,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene3Controller implements Initializable {
+public class PromptAnswersController implements Initializable {
     @FXML
-    public Label labelUsername;
+    public TextField input1;
+    @FXML
+    public Label labelSubmission;
+
 
 
 
     @FXML
+
+
+    public void onHelloButtonClick3(ActionEvent event) {
+        System.exit(1);
+    }
 
     public void onHelloButtonClick7(ActionEvent event) throws IOException {
         Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
@@ -31,18 +39,6 @@ public class Scene3Controller implements Initializable {
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene5);
         app_stage.show();
-    }
-
-    public void onHelloButtonClick5(ActionEvent event) throws IOException {
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
-        Scene scene3 = new Scene(scene_3_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene3);
-        app_stage.show();
-    }
-
-    public void onHelloButtonClick3(ActionEvent event) {
-        System.exit(1);
     }
 
 
@@ -53,16 +49,27 @@ public class Scene3Controller implements Initializable {
         app_stage.setScene(scene2);
         app_stage.show();
     }
+
+
+    public void onHelloButtonClick11(ActionEvent event) throws IOException {
+        Parent scene_8_parent = FXMLLoader.load(getClass().getResource("scene8.fxml"));
+        Scene scene8 = new Scene(scene_8_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene8);
+        app_stage.show();
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.username.equals("")){
-            labelUsername.setText("");
+        if (Data.submission.equals("")){
+            labelSubmission.setText("blank");
         }
         else{
-            labelUsername.setText(Data.username);
+            labelSubmission.setText(Data.submission+Data.kort);
 
         }
-
     }
+
 }
 

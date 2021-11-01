@@ -21,7 +21,7 @@ public class YakboksApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("scene1.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("EnterUsername.fxml"));
             Scene scene1 = new Scene(fxmlLoader.load(), 1920, 1080);
             primaryStage.setTitle("YakBoks!");
             primaryStage.setScene(scene1);

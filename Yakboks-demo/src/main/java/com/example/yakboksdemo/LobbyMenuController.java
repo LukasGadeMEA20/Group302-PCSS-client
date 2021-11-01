@@ -17,8 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene5Controller implements Initializable {
-
+public class LobbyMenuController implements Initializable {
     @FXML
     public Label labelUsername;
 
@@ -26,11 +25,19 @@ public class Scene5Controller implements Initializable {
 
     @FXML
 
-    public void onHelloButtonClick8(ActionEvent event) throws IOException {
-        Parent scene_6_parent = FXMLLoader.load(getClass().getResource("scene6.fxml"));
-        Scene scene6 = new Scene(scene_6_parent);
+    public void onHelloButtonClick7(ActionEvent event) throws IOException {
+        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+        Scene scene5 = new Scene(scene_5_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene6);
+        app_stage.setScene(scene5);
+        app_stage.show();
+    }
+
+    public void onHelloButtonClick5(ActionEvent event) throws IOException {
+        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("LobbyMenu.fxml"));
+        Scene scene3 = new Scene(scene_3_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene3);
         app_stage.show();
     }
 
@@ -38,17 +45,9 @@ public class Scene5Controller implements Initializable {
         System.exit(1);
     }
 
-    public void onHelloButtonClick9(ActionEvent event) throws IOException {
-        Parent scene_7_parent = FXMLLoader.load(getClass().getResource("scene7.fxml"));
-        Scene scene7 = new Scene(scene_7_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene7);
-        app_stage.show();
-    }
-
 
     public void onHelloButtonClick10(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene2);

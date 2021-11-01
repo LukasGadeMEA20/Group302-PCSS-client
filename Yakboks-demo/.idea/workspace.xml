@@ -31,7 +31,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene1.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/yakboksdemo/scene1.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Yakboks-demo.iml" root0="FORCE_HIGHLIGHTING" />
@@ -54,6 +53,7 @@
   </component>
   <component name="RunManager">
     <configuration name="YakboksApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
       <option name="MAIN_CLASS_NAME" value="com.example.yakboksdemo.YakboksApplication" />
       <module name="Yakboks-demo" />
       <extension name="coverage">
@@ -110,6 +110,14 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17-ea+11/javafx-graphics-17-ea+11-win.jar!/javafx/application/Application.class</url>
+          <line>70</line>
+          <properties class="javafx.application.Application" method="start">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

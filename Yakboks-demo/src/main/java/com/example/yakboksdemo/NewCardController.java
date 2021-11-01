@@ -17,15 +17,33 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene4Controller implements Initializable {
+public class NewCardController implements Initializable {
 
+    @FXML
+    public Label labelUsername;
 
 
 
     @FXML
 
+    public void onHelloButtonClick8(ActionEvent event) throws IOException {
+        Parent scene_6_parent = FXMLLoader.load(getClass().getResource("scene6.fxml"));
+        Scene scene6 = new Scene(scene_6_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene6);
+        app_stage.show();
+    }
+
     public void onHelloButtonClick3(ActionEvent event) {
         System.exit(1);
+    }
+
+    public void onHelloButtonClick9(ActionEvent event) throws IOException {
+        Parent scene_7_parent = FXMLLoader.load(getClass().getResource("scene7.fxml"));
+        Scene scene7 = new Scene(scene_7_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene7);
+        app_stage.show();
     }
 
 
@@ -38,6 +56,13 @@ public class Scene4Controller implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (Data.username.equals("")){
+            labelUsername.setText("");
+        }
+        else{
+            labelUsername.setText(Data.username);
+
+        }
 
     }
 }

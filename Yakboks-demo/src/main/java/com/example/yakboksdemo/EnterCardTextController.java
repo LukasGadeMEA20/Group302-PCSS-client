@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene8Controller implements Initializable {
+public class EnterCardTextController implements Initializable {
     @FXML
     public TextField input1;
     @FXML
@@ -43,7 +43,7 @@ public class Scene8Controller implements Initializable {
 
 
     public void onHelloButtonClick10(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene2);
@@ -52,24 +52,26 @@ public class Scene8Controller implements Initializable {
 
 
     public void onHelloButtonClick11(ActionEvent event) throws IOException {
+        Data.submission = input1.getText();
         Parent scene_8_parent = FXMLLoader.load(getClass().getResource("scene8.fxml"));
         Scene scene8 = new Scene(scene_8_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene8);
         app_stage.show();
+
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.submission.equals("")){
-            labelSubmission.setText("blank");
-        }
-        else{
-            labelSubmission.setText(Data.submission+Data.kort);
+            if (Data.submission.equals("")){
+                labelSubmission.setText("blank" + Data.kort);
+            }
+            else{
+                labelSubmission.setText(Data.submission);
 
+            }
         }
+
     }
-
-}
 

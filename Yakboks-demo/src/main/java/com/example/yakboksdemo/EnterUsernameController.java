@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene1Controller implements Initializable {
+public class EnterUsernameController implements Initializable {
     @FXML
     public TextField input;
     @FXML
@@ -40,7 +40,7 @@ public class Scene1Controller implements Initializable {
     //skifter kun side hvis login er true.
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
         if (Login) {
-            Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+            Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
             Scene scene2 = new Scene(scene_2_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setScene(scene2);
@@ -55,7 +55,7 @@ public class Scene1Controller implements Initializable {
 
     //samme kode igennem til at skifte side.
     public void onHelloButtonClick2(ActionEvent event) throws IOException {
-        Parent scene_1_parent = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+        Parent scene_1_parent = FXMLLoader.load(getClass().getResource("EnterUsername.fxml"));
         Scene scene1 = new Scene(scene_1_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene1);
@@ -78,7 +78,7 @@ public class Scene1Controller implements Initializable {
     }
 
     public void onHelloButtonClick6(ActionEvent event) throws IOException {
-        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("scene4.fxml"));
+        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("HowToPlay.fxml"));
         Scene scene4 = new Scene(scene_4_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene4);
