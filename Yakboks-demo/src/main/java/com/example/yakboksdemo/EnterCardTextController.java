@@ -34,7 +34,7 @@ public class EnterCardTextController implements Initializable {
     }
 
     public void onHelloButtonClick7(ActionEvent event) throws IOException {
-        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("NewCard.fxml"));
         Scene scene5 = new Scene(scene_5_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene5);
@@ -53,7 +53,7 @@ public class EnterCardTextController implements Initializable {
 
     public void onHelloButtonClick11(ActionEvent event) throws IOException {
         Data.submission = input1.getText();
-        Parent scene_8_parent = FXMLLoader.load(getClass().getResource("scene8.fxml"));
+        Parent scene_8_parent = FXMLLoader.load(getClass().getResource("PromptAnswers.fxml"));
         Scene scene8 = new Scene(scene_8_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene8);

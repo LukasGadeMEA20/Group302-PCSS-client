@@ -26,7 +26,7 @@ public class LobbyMenuController implements Initializable {
     @FXML
 
     public void onHelloButtonClick7(ActionEvent event) throws IOException {
-        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("NewCard.fxml"));
         Scene scene5 = new Scene(scene_5_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene5);
