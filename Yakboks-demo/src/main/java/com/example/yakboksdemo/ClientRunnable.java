@@ -52,7 +52,12 @@ public class ClientRunnable implements Runnable {
 
                         break;
                     case 1:
-                        System.out.println("You are connected to the server");
+                        System.out.println("You are connected to the server");Data.userNames = new ArrayList<String>();
+                        int temp = fromServer.readInt();
+                        for(int i = 0; i < temp; i++){
+                            Data.userNames.add(fromServer.readUTF());
+                        }
+                        Data.userNamesForList = FXCollections.observableArrayList(Data.userNames);
                         break;
                     case 2:
                         prompt = fromServer.readUTF();
