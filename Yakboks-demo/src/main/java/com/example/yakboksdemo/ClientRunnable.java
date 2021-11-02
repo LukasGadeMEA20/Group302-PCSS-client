@@ -23,17 +23,16 @@ public class ClientRunnable implements Runnable {
         String prompt;
 
         try {
-            Socket connectToServer = new Socket("192.168.222.181", 8000);
+            Socket connectToServer = new Socket("localhost", 8000);
 
             DataInputStream fromServer = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream toServer = new DataOutputStream(connectToServer.getOutputStream());
 
             toServer.writeUTF(userName);
 
-
-
             while(connect){
                 int state = fromServer.readInt();
+                //System.out.println(state);
                 switch(state){
                     case 0:
                         //System.out.println("Write '0' when everyone is ready.");

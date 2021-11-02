@@ -78,14 +78,13 @@ public class Scene3Controller implements Initializable {
 
         Data.lobbyChoice = 1;
 
-        System.out.println("fuck");
-
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
-                    while(true){
-                        if(Data.connected) {
+                    boolean checker = true;
+                    while(checker){
+                        if(Data.connected && Data.lobbyChoice != 0) {
                             Platform.runLater(new Runnable() {
                                 @Override
                                 public void run() {
@@ -95,6 +94,8 @@ public class Scene3Controller implements Initializable {
                             });
 
                             Thread.sleep(2000);
+                        } else if (Data.lobbyChoice == 0){
+                            checker = false;
                         } else {
                             System.out.println("I have to be annoying :)");
                             Thread.sleep(2000);
