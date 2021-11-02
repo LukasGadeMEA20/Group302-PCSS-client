@@ -71,6 +71,8 @@ public class Scene3Controller implements Initializable {
             labelUsername.setText(Data.username);
         }
 
+        continueHostButton.setVisible(Data.isHost);
+
         if(Data.isHost){
             continueHostButton.setVisible(true);
         } else {
@@ -91,6 +93,12 @@ public class Scene3Controller implements Initializable {
                                 public void run() {
                                     myListView.getItems().setAll(Data.userNamesForList);
                                     System.out.println("boobies"+Data.userNamesForList);
+                                    Platform.runLater(new Runnable() {
+                                        @Override
+                                        public void run() { 
+                                            continueHostButton.setVisible(Data.isHost);
+                                        }
+                                    });
                                 }
                             });
 
