@@ -95,7 +95,7 @@ public class Scene3Controller implements Initializable {
                                     System.out.println("boobies"+Data.userNamesForList);
                                     Platform.runLater(new Runnable() {
                                         @Override
-                                        public void run() { 
+                                        public void run() {
                                             continueHostButton.setVisible(Data.isHost);
                                         }
                                     });

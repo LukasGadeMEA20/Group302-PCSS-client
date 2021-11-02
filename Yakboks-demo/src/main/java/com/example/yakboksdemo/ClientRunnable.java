@@ -61,6 +61,7 @@ public class ClientRunnable implements Runnable {
                         Data.userNamesForList = FXCollections.observableArrayList(Data.userNames);
                         break;
                     case 2:
+                        Data.lobbyChoice = 0;
                         prompt = fromServer.readUTF();
                         System.out.println("Please wait while the other users write an answer for the prompt: \n" + prompt);
                         Data.kort = prompt;
@@ -73,6 +74,7 @@ public class ClientRunnable implements Runnable {
 
                         break;
                     case 3:
+                        Data.lobbyChoice = 0;
                         prompt = fromServer.readUTF();
                         System.out.println("Write a funny answer for the prompt: \n" + prompt);
                         Data.kort = prompt;
