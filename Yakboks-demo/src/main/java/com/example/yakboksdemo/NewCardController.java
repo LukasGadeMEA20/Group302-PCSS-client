@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene5Controller implements Initializable {
+public class NewCardController implements Initializable {
 
     @FXML
     public Label labelUsername;
@@ -27,7 +27,7 @@ public class Scene5Controller implements Initializable {
     @FXML
 
     public void onHelloButtonClick8(ActionEvent event) throws IOException {
-        Parent scene_6_parent = FXMLLoader.load(getClass().getResource("scene6.fxml"));
+        Parent scene_6_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
         Scene scene6 = new Scene(scene_6_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene6);
@@ -39,7 +39,7 @@ public class Scene5Controller implements Initializable {
     }
 
     public void onHelloButtonClick9(ActionEvent event) throws IOException {
-        Parent scene_7_parent = FXMLLoader.load(getClass().getResource("scene7.fxml"));
+        Parent scene_7_parent = FXMLLoader.load(getClass().getResource("VoteList.fxml"));
         Scene scene7 = new Scene(scene_7_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene7);
@@ -48,7 +48,7 @@ public class Scene5Controller implements Initializable {
 
 
     public void onHelloButtonClick10(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene2);
