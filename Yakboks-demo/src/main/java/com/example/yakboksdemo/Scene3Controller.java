@@ -80,7 +80,7 @@ public class Scene3Controller implements Initializable {
 
         System.out.println("fuck");
 
-        new Thread(new Runnable() {
+        Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
@@ -95,13 +95,19 @@ public class Scene3Controller implements Initializable {
                             });
 
                             Thread.sleep(2000);
+                        } else {
+                            System.out.println("I have to be annoying :)");
+                            Thread.sleep(2000);
                         }
                     }
                 } catch (InterruptedException e){
                     e.printStackTrace();
                 }
             }
-        }).start();
+        });
+
+        t.setPriority(10);
+        t.start();
         /*Platform.runLater(new Runnable() {
             @Override
             public void run() {
