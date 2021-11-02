@@ -85,21 +85,25 @@ public class Scene3Controller implements Initializable {
             public void run() {
                 //while(Data.lobbyChoice != 0) {
                 try {
-                    sex();
+                    Update();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("HEj");
-                    myListView.getItems().setAll(Data.userNamesForList);
+                myListView.getItems().setAll(Data.userNamesForList);
                     //listView = new ListView<>(Data.userNamesForList);
                     //System.out.println(listView.getItems());
                 //}
             }
 
-            private void sex() throws InterruptedException {
+            private void Update() throws InterruptedException {
                 if(Data.connected == false){
                     Thread.sleep(2000);
-                    sex();
+                    Update();
+                }
+
+                if(Data.lobbyChoice != 0) {
+                    myListView.getItems().setAll(Data.userNamesForList);
+                    Update();
                 }
             }
         });
