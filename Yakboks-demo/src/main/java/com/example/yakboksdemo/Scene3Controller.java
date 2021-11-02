@@ -80,7 +80,29 @@ public class Scene3Controller implements Initializable {
 
         System.out.println("fuck");
 
-        Platform.runLater(new Runnable() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    while(true){
+                        if(Data.connected) {
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
+                                    myListView.getItems().setAll(Data.userNamesForList);
+                                    System.out.println("boobies"+Data.userNamesForList);
+                                }
+                            });
+
+                            Thread.sleep(2000);
+                        }
+                    }
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        /*Platform.runLater(new Runnable() {
             @Override
             public void run() {
                 //while(Data.lobbyChoice != 0) {
@@ -100,14 +122,8 @@ public class Scene3Controller implements Initializable {
                     Thread.sleep(2000);
                     Update();
                 }
-
-                if(Data.lobbyChoice != 0) {
-                    myListView.getItems().setAll(Data.userNamesForList);
-                    Thread.sleep(1000);
-                    Update();
-                }
             }
-        });
+        });*/
     }
 }
 

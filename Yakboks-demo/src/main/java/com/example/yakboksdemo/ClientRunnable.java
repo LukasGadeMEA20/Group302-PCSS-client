@@ -30,6 +30,8 @@ public class ClientRunnable implements Runnable {
 
             toServer.writeUTF(userName);
 
+
+
             while(connect){
                 int state = fromServer.readInt();
                 switch(state){
@@ -40,7 +42,7 @@ public class ClientRunnable implements Runnable {
                         int confirm = Data.lobbyChoice; //scannerInput.nextInt();
 
                         toServer.writeInt(confirm);
-                        //System.out.println(confirm);
+                        System.out.println(confirm);
                         if (confirm == 1){
                             Data.userNames = new ArrayList<String>();
                             int temp = fromServer.readInt();
@@ -89,6 +91,7 @@ public class ClientRunnable implements Runnable {
                 }
                 toServer.flush();
                 Data.connected = true;
+                System.out.println("YEP");
             }
             scannerInput.close();
             connectToServer.close();
