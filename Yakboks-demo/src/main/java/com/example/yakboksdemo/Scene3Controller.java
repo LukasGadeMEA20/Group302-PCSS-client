@@ -103,6 +103,7 @@ public class Scene3Controller implements Initializable {
 
                 if(Data.lobbyChoice != 0) {
                     myListView.getItems().setAll(Data.userNamesForList);
+                    Thread.sleep(1000);
                     Update();
                 }
             }
