@@ -1,6 +1,7 @@
 package com.example.yakboksdemo;
 
 import javafx.application.Platform;
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,11 +33,11 @@ public class Scene3Controller implements Initializable {
     public void onHelloButtonClick7(ActionEvent event) throws IOException {
         if(Data.isHost) {
             Data.lobbyChoice = 0;
-            Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+            /*Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
             Scene scene5 = new Scene(scene_5_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setScene(scene5);
-            app_stage.show();
+            app_stage.show();*/
         }
     }
 
@@ -96,6 +97,26 @@ public class Scene3Controller implements Initializable {
                             Thread.sleep(2000);
                         } else if (Data.lobbyChoice == 0){
                             checker = false;
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    Parent scene_5_parent = null;
+                                    try {
+                                        scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
+                                        System.out.print(Data.veryDumbCode);
+                                        Scene scene5 = new Scene(scene_5_parent);
+                                        Data.veryDumbCode.setScene(scene5);
+                                        Data.veryDumbCode.show();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            });
+                            /*
+                            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                            app_stage.setScene(scene5);
+                            app_stage.show();*/
                         } else {
                             System.out.println("I have to be annoying :)");
                             Thread.sleep(2000);
@@ -132,5 +153,7 @@ public class Scene3Controller implements Initializable {
             }
         });*/
     }
+
+
 }
 

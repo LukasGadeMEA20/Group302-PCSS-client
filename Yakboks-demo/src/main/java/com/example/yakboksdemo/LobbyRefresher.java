@@ -14,10 +14,7 @@ public class LobbyRefresher implements Runnable{
     @Override
     public void run() {
         while(Data.lobbyChoice != 0) {
-            ObservableList<String> f = FXCollections.observableArrayList("ee", "Eee");
             listView.setItems(Data.userNamesForList);
-            //listView = new ListView<>(Data.userNamesForList);
-            //System.out.println(listView.getItems());
         }
     }
 }

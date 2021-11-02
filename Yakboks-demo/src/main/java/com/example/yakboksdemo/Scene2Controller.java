@@ -21,10 +21,7 @@ public class Scene2Controller implements Initializable {
     @FXML
     public Label labelUsername;
 
-
-
     @FXML
-
     public void onJoinGameClick(ActionEvent event) throws IOException {
         new Thread(
             new ClientRunnable(Data.username)
@@ -51,15 +48,8 @@ public class Scene2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.username.equals("")){
-            labelUsername.setText("");
-        }
-        else{
-            labelUsername.setText(Data.username);
-
-        }
+        labelUsername.setText(Data.username);
     }
-
-    }
+}
 
 

@@ -27,8 +27,10 @@ public class YakboksApplication extends Application {
             primaryStage.setScene(scene1);
             primaryStage.show();
 
+            Data.veryDumbCode = primaryStage;
+
             //Closes the window with esc button
-        primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
             if (KeyCode.ESCAPE == event.getCode()) {
                 primaryStage.close();
             }
