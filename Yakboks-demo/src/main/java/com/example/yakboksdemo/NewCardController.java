@@ -26,7 +26,7 @@ public class NewCardController implements Initializable {
 
     @FXML
 
-    public void onHelloButtonClick8(ActionEvent event) throws IOException {
+    public void onNewCardClick(ActionEvent event) throws IOException {
         Parent scene_6_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
         Scene scene6 = new Scene(scene_6_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -34,11 +34,11 @@ public class NewCardController implements Initializable {
         app_stage.show();
     }
 
-    public void onHelloButtonClick3(ActionEvent event) {
+    public void onExitClick(ActionEvent event) {
         System.exit(1);
     }
 
-    public void onHelloButtonClick9(ActionEvent event) throws IOException {
+    public void onScoreBoardClick(ActionEvent event) throws IOException {
         Parent scene_7_parent = FXMLLoader.load(getClass().getResource("VoteList.fxml"));
         Scene scene7 = new Scene(scene_7_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -47,7 +47,7 @@ public class NewCardController implements Initializable {
     }
 
 
-    public void onHelloButtonClick10(ActionEvent event) throws IOException {
+    public void onMainMenuClick(ActionEvent event) throws IOException {
         Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
