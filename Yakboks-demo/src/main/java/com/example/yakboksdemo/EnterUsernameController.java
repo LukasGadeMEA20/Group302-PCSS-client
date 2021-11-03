@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene1Controller {
+public class EnterUsernameController {
     @FXML
     public TextField input;
 
@@ -36,11 +36,11 @@ public class Scene1Controller {
     @FXML
     //skifter kun side hvis login er true.
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
-        Scene scene2 = new Scene(scene_2_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene2);
-        app_stage.show();
+            Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            Scene scene2 = new Scene(scene_2_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            app_stage.setScene(scene2);
+            app_stage.show();
     }
 
     public void onHelloButtonClick4(ActionEvent event) throws IOException {
@@ -52,7 +52,7 @@ public class Scene1Controller {
             label4.setText("username valid");
             Data.username = input.getText(); // Add to connect to server screen.
             //continue1.setVisible(true);
-            Parent scene_1_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+            Parent scene_1_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
             Scene scene1 = new Scene(scene_1_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setScene(scene1);

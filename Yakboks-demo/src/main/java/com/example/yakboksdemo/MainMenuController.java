@@ -17,17 +17,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene2Controller implements Initializable {
+public class MainMenuController implements Initializable {
     @FXML
     public Label labelUsername;
 
     @FXML
     public void onJoinGameClick(ActionEvent event) throws IOException {
-        new Thread(
-            new ClientRunnable(Data.username)
-        ).start();
 
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
+        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("lobbyMenu.fxml"));
         Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene3);
@@ -39,7 +36,7 @@ public class Scene2Controller implements Initializable {
     }
 
     public void onHowToPlayClick(ActionEvent event) throws IOException {
-        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("scene4.fxml"));
+        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("HowToPlay.fxml"));
         Scene scene4 = new Scene(scene_4_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene4);

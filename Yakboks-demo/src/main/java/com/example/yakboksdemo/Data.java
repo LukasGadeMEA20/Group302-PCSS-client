@@ -21,4 +21,7 @@ public class Data {
     public static boolean isHost = false;
 
     public static boolean connected = false;
+
+    public static String IP;
+    public static int Port;
 }
