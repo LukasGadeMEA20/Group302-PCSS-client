@@ -48,7 +48,6 @@ public class EnterUsernameController {
             label3.setText("Please type in a username");
         }
         else {
-            Login=true;
             label3.setText("");
             label4.setText("username valid");
             Data.username = input.getText(); // Add to connect to server screen.
