@@ -36,16 +36,11 @@ public class EnterUsernameController {
     @FXML
     //skifter kun side hvis login er true.
     protected void onContinueClick(ActionEvent event) throws IOException {
-        if (Login) {
             Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
             Scene scene2 = new Scene(scene_2_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setScene(scene2);
             app_stage.show();
-        }
-        else{
-            label3.setText("Please type in a username");
-        }
     }
 
     public void onCheckUsernameClick(ActionEvent event) throws IOException {
