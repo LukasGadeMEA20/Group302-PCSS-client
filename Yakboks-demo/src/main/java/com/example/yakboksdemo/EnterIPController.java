@@ -36,22 +36,11 @@ public class EnterIPController implements Initializable {
 
 
     public void onMainMenuClick(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene2);
         app_stage.show();
-    }
-
-    public void onHelloButtonClick7(ActionEvent event) throws IOException {
-        if(Data.isHost) {
-            Data.lobbyChoice = 0;
-            Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
-            Scene scene5 = new Scene(scene_5_parent);
-            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            app_stage.setScene(scene5);
-            app_stage.show();
-        }
     }
 
     public void connectToServer(ActionEvent event) throws IOException {
