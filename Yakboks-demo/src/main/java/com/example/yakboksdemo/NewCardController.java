@@ -55,6 +55,7 @@ public class NewCardController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         labelUsername.setText(Data.username);
 
+
     }
 }
 

@@ -71,14 +71,6 @@
             <Font size="37.0" />
          </font>
       </Label>
-      <Button layoutX="885.0" layoutY="739.0" mnemonicParsing="false" onAction="#onHelloButtonClick5" prefHeight="74.0" prefWidth="220.0" text="REFRESH PAGE">
-         <effect>
-            <ColorAdjust hue="-1.0" saturation="0.43" />
-         </effect>
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
       <Label fx:id="labelUsername" layoutX="869.0" layoutY="360.0" text="xxx1">
          <font>
             <Font size="37.0" />

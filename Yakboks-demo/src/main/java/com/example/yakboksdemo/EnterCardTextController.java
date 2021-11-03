@@ -62,14 +62,7 @@ public class EnterCardTextController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            if (Data.submission.equals("")){
-                labelSubmission.setText("blank" + Data.kort);
-            }
-            else{
-                labelSubmission.setText(Data.submission);
-
-            }
+            labelSubmission.setText(Data.kort);
         }
-
     }
 

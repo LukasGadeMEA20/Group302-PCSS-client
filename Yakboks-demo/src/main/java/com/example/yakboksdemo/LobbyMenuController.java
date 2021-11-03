@@ -113,7 +113,7 @@ public class LobbyMenuController implements Initializable {
 
                                     Parent scene_5_parent = null;
                                     try {
-                                        scene_5_parent = FXMLLoader.load(getClass().getResource("NewCard.fxml"));
+                                        scene_5_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
                                         System.out.print(Data.veryDumbCode);
                                         Scene scene5 = new Scene(scene_5_parent);
                                         Data.veryDumbCode.setScene(scene5);
