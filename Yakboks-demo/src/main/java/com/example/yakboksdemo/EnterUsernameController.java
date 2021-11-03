@@ -35,7 +35,7 @@ public class EnterUsernameController {
     //Makes an event so that each time you click the button, it will switch to the other scene/page
     @FXML
     //skifter kun side hvis login er true.
-    protected void onHelloButtonClick(ActionEvent event) throws IOException {
+    protected void onContinueClick(ActionEvent event) throws IOException {
         if (Login) {
             Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
             Scene scene2 = new Scene(scene_2_parent);
@@ -48,7 +48,7 @@ public class EnterUsernameController {
         }
     }
 
-    public void onHelloButtonClick4(ActionEvent event) throws IOException {
+    public void onCheckUsernameClick(ActionEvent event) throws IOException {
         if (input.getText().isEmpty()) {
             label3.setText("Please type in a username");
             Login=false;
