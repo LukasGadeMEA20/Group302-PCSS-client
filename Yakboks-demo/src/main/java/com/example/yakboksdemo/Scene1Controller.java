@@ -36,25 +36,18 @@ public class Scene1Controller {
     @FXML
     //skifter kun side hvis login er true.
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
-        if (Login) {
-            Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
-            Scene scene2 = new Scene(scene_2_parent);
-            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            app_stage.setScene(scene2);
-            app_stage.show();
-        }
-        else{
-            label3.setText("Please type in a username");
-        }
+        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        Scene scene2 = new Scene(scene_2_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.setScene(scene2);
+        app_stage.show();
     }
 
     public void onHelloButtonClick4(ActionEvent event) throws IOException {
         if (input.getText().isEmpty()) {
             label3.setText("Please type in a username");
-            Login=false;
         }
         else {
-            Login=true;
             label3.setText("");
             label4.setText("username valid");
             Data.username = input.getText(); // Add to connect to server screen.

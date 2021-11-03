@@ -81,6 +81,8 @@ public class Scene3Controller implements Initializable {
 
         Data.lobbyChoice = 1;
 
+        // This thread is for updating the lobby in checking if there are new who joined the lobby
+        // But it also checks whether the game should start, which it does when the first who joins clicks the continue button.
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
