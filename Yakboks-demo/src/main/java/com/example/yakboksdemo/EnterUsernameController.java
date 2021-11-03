@@ -46,7 +46,6 @@ public class EnterUsernameController {
     public void onCheckUsernameClick(ActionEvent event) throws IOException {
         if (input.getText().isEmpty()) {
             label3.setText("Please type in a username");
-            Login=false;
         }
         else {
             Login=true;
