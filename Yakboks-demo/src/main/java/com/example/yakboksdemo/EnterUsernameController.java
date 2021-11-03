@@ -36,10 +36,7 @@ public class EnterUsernameController {
     @FXML
     //skifter kun side hvis login er true.
     protected void onContinueClick(ActionEvent event) throws IOException {
-<<<<<<< Updated upstream
         if (Login) {
-=======
->>>>>>> Stashed changes
             Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
             Scene scene2 = new Scene(scene_2_parent);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
