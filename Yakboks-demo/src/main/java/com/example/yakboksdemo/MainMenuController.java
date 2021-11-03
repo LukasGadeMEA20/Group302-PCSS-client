@@ -24,7 +24,7 @@ public class MainMenuController implements Initializable {
     @FXML
     public void onJoinGameClick(ActionEvent event) throws IOException {
 
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("lobbyMenu.fxml"));
+        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("EnterIP.fxml"));
         Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene3);

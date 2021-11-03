@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene9Controller implements Initializable {
+public class EnterIPController implements Initializable {
     @FXML
     public TextField textIP;
     public TextField textPort;
@@ -75,7 +75,7 @@ public class Scene9Controller implements Initializable {
                 new ClientRunnable(Data.username, Data.IP, Data.Port)
         ).start();
 
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
+        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("LobbyMenu.fxml"));
         Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene3);
