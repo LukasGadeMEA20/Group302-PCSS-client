@@ -17,21 +17,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Scene2Controller implements Initializable {
+public class MainMenuController implements Initializable {
     @FXML
     public Label labelUsername;
 
-
-
     @FXML
-
     public void onJoinGameClick(ActionEvent event) throws IOException {
 
-
-        Parent scene_9_parent = FXMLLoader.load(getClass().getResource("scene9.fxml"));
-        Scene scene9 = new Scene(scene_9_parent);
+        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("lobbyMenu.fxml"));
+        Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene9);
+        app_stage.setScene(scene3);
         app_stage.show();
     }
 
@@ -40,7 +36,7 @@ public class Scene2Controller implements Initializable {
     }
 
     public void onHowToPlayClick(ActionEvent event) throws IOException {
-        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("scene4.fxml"));
+        Parent scene_4_parent = FXMLLoader.load(getClass().getResource("HowToPlay.fxml"));
         Scene scene4 = new Scene(scene_4_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene4);
@@ -49,15 +45,8 @@ public class Scene2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.username.equals("")){
-            labelUsername.setText("");
-        }
-        else{
-            labelUsername.setText(Data.username);
-
-        }
+        labelUsername.setText(Data.username);
     }
-
-    }
+}
 
 

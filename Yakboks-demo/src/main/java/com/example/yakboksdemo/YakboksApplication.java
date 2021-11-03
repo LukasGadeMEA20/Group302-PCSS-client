@@ -21,14 +21,16 @@ public class YakboksApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("scene1.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(YakboksApplication.class.getResource("EnterUsername.fxml"));
             Scene scene1 = new Scene(fxmlLoader.load(), 1920, 1080);
             primaryStage.setTitle("YakBoks!");
             primaryStage.setScene(scene1);
             primaryStage.show();
 
+            Data.veryDumbCode = primaryStage;
+
             //Closes the window with esc button
-        primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
             if (KeyCode.ESCAPE == event.getCode()) {
                 primaryStage.close();
             }

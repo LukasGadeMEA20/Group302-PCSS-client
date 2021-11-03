@@ -2,10 +2,13 @@ package com.example.yakboksdemo;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
 public class Data {
+    public static Stage veryDumbCode = null;
+
     public static String username = "";
     public static String submission = "";
     public static String kort = " is a really good excuse to take a break ";
