@@ -50,6 +50,7 @@ public class EnterCardTextController implements Initializable {
 
 
     public void onSubmitButton(ActionEvent event) throws IOException {
+        System.out.println("prut");
         Data.submission = promptInput.getText();
         Parent scene_8_parent = FXMLLoader.load(getClass().getResource("PromptAnswers.fxml"));
         Scene scene8 = new Scene(scene_8_parent);
