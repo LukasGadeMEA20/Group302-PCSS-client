@@ -26,14 +26,12 @@ public class Scene2Controller implements Initializable {
     @FXML
 
     public void onJoinGameClick(ActionEvent event) throws IOException {
-        new Thread(
-            new ClientRunnable(Data.username)
-        ).start();
 
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("scene3.fxml"));
-        Scene scene3 = new Scene(scene_3_parent);
+
+        Parent scene_9_parent = FXMLLoader.load(getClass().getResource("scene9.fxml"));
+        Scene scene9 = new Scene(scene_9_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene3);
+        app_stage.setScene(scene9);
         app_stage.show();
     }
 
