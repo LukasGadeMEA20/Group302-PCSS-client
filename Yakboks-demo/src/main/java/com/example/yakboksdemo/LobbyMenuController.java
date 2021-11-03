@@ -30,7 +30,7 @@ public class LobbyMenuController implements Initializable {
     public ListView<String> myListView;
 
     @FXML
-    public void onHelloButtonClick7(ActionEvent event) throws IOException {
+    public void onContinueClick(ActionEvent event) throws IOException {
         if(Data.isHost) {
             Data.lobbyChoice = 0;
             /*Parent scene_5_parent = FXMLLoader.load(getClass().getResource("scene5.fxml"));
@@ -41,7 +41,7 @@ public class LobbyMenuController implements Initializable {
         }
     }
 
-    public void onHelloButtonClick5(ActionEvent event) throws IOException {
+    public void onRefreshClick(ActionEvent event) throws IOException {
         Parent scene_3_parent = FXMLLoader.load(getClass().getResource("LobbyMenu.fxml"));
         Scene scene3 = new Scene(scene_3_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -49,12 +49,12 @@ public class LobbyMenuController implements Initializable {
         app_stage.show();
     }
 
-    public void onHelloButtonClick3(ActionEvent event) {
+    public void onExitClick(ActionEvent event) {
         System.exit(1);
     }
 
 
-    public void onHelloButtonClick10(ActionEvent event) throws IOException {
+    public void onMainMenuClick(ActionEvent event) throws IOException {
         Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
