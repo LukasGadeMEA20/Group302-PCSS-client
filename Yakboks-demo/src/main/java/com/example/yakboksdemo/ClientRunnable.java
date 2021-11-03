@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class ClientRunnable implements Runnable {
     String userName;
     String IP;
-    int Port;
+    int port;
 
 
     ClientRunnable(String _userName, String _IP, int _port) {
         userName = _userName;
         IP = _IP;
-        Port = _port;
+        port = _port;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class ClientRunnable implements Runnable {
         String prompt;
 
         try {
-            Socket connectToServer = new Socket(IP, Port);
+            Socket connectToServer = new Socket(IP, port);
 
             DataInputStream fromServer = new DataInputStream(connectToServer.getInputStream());
             DataOutputStream toServer = new DataOutputStream(connectToServer.getOutputStream());
