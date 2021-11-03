@@ -22,10 +22,7 @@ public class NewCardController implements Initializable {
     @FXML
     public Label labelUsername;
 
-
-
     @FXML
-
     public void onNewCardClick(ActionEvent event) throws IOException {
         Parent scene_6_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
         Scene scene6 = new Scene(scene_6_parent);
@@ -56,13 +53,7 @@ public class NewCardController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.username.equals("")){
-            labelUsername.setText("");
-        }
-        else{
-            labelUsername.setText(Data.username);
-
-        }
+        labelUsername.setText(Data.username);
 
     }
 }

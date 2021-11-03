@@ -68,27 +68,47 @@ public class ClientRunnable implements Runnable {
                     case 2:
                         Data.lobbyChoice = 0;
                         prompt = fromServer.readUTF();
-                        System.out.println("Please wait while the other users write an answer for the prompt: \n" + prompt);
                         Data.kort = prompt;
 
-                        System.out.println(fromServer.readUTF());
+                        Data.textToDisplay = "Please wait while the other users write an answer for the prompt: \n" + Data.kort;
+                        System.out.println(Data.textToDisplay);
+
+                        Data.listOfAnswers = fromServer.readUTF();
+                        System.out.println(Data.listOfAnswers);
 
                         toServer.flush();
 
-                        toServer.writeInt(scannerInput.nextInt());
+                        boolean choiceMade = false;
+                        while(!choiceMade){
+                            if(Data.winningCard != -1){
+                                toServer.writeInt(Data.winningCard);
+                                choiceMade = true;
+                            }
+                            Thread.sleep(2000);
+                        }
 
                         break;
                     case 3:
-                        Data.lobbyChoice = 0;
+                        if(Data.lobbyChoice != 0) {
+                            Data.lobbyChoice = 0;
+                        }
+
                         prompt = fromServer.readUTF();
-                        System.out.println("Write a funny answer for the prompt: \n" + prompt);
+
                         Data.kort = prompt;
 
-                        String test = scannerInput.nextLine();
+                        Data.textToDisplay = "Write a funny answer for the prompt: \n" + Data.kort;
+                        //System.out.println(Data.textToDisplay);
 
-                        System.out.println(test);
-
-                        toServer.writeUTF(test);
+                        boolean userWritten = false;
+                        while(!userWritten) {
+                            if (Data.thisUserAnswer.equals("")) {
+                                toServer.writeUTF(Data.thisUserAnswer);
+                                userWritten = true;
+                            }
+                            Thread.sleep(2000);
+                        }
+                        System.out.println(Data.thisUserAnswer);
 
                         break;
                     case 4:
@@ -100,7 +120,7 @@ public class ClientRunnable implements Runnable {
             }
             scannerInput.close();
             connectToServer.close();
-        } catch(IOException e){
+        } catch(IOException | InterruptedException e){
             System.out.println(e.toString());
         }
     }

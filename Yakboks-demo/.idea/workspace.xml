@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ee2510-c51d-4130-a70d-5e5dc4ebd31c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/Scene9Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/EnterIPController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/ClientRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/ClientRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene2Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene9Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/Scene9Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/scene9.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/yakboksdemo/EnterIP.fxml" afterDir="false" />
-    </list>
+
+    <list default="true" id="6fdd175d-de4f-46e6-b0ff-9a1f7594d29b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +31,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Yakboks-demo.iml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/yakboksdemo/scene1.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Yakboks-demo.iml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/yakboksdemo/YakboksApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
