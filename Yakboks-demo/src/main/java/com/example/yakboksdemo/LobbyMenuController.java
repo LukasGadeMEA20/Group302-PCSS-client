@@ -87,6 +87,7 @@ public class LobbyMenuController implements Initializable {
             @Override
             public void run() {
                 try{
+                    String dot = ".";
                     boolean checker = true;
                     while(checker){
                         if(Data.connected && Data.lobbyChoice != 0) {
@@ -94,7 +95,6 @@ public class LobbyMenuController implements Initializable {
                                 @Override
                                 public void run() {
                                     myListView.getItems().setAll(Data.userNamesForList);
-                                    System.out.println("boobies"+Data.userNamesForList);
                                     Platform.runLater(new Runnable() {
                                         @Override
                                         public void run() {
@@ -110,10 +110,8 @@ public class LobbyMenuController implements Initializable {
                             Platform.runLater(new Runnable() {
                                 @Override
                                 public void run() {
-
-                                    Parent scene_5_parent = null;
                                     try {
-                                        scene_5_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
+                                        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("EnterCardText.fxml"));
                                         System.out.print(Data.veryDumbCode);
                                         Scene scene5 = new Scene(scene_5_parent);
                                         Data.veryDumbCode.setScene(scene5);
@@ -123,12 +121,9 @@ public class LobbyMenuController implements Initializable {
                                     }
                                 }
                             });
-                            /*
-                            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                            app_stage.setScene(scene5);
-                            app_stage.show();*/
                         } else {
-                            System.out.println("I have to be annoying :)");
+                            System.out.println("Connecting"+dot);
+                            dot+=dot;
                             Thread.sleep(2000);
                         }
                     }
@@ -140,30 +135,6 @@ public class LobbyMenuController implements Initializable {
 
         t.setPriority(10);
         t.start();
-        /*Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                //while(Data.lobbyChoice != 0) {
-                try {
-                    Update();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                myListView.getItems().setAll(Data.userNamesForList);
-                    //listView = new ListView<>(Data.userNamesForList);
-                    //System.out.println(listView.getItems());
-                //}
-            }
-
-            private void Update() throws InterruptedException {
-                if(Data.connected == false){
-                    Thread.sleep(2000);
-                    Update();
-                }
-            }
-        });*/
     }
-
-
 }
 

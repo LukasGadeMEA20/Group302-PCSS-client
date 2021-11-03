@@ -28,5 +28,5 @@ public class Data {
     public static String textToDisplay;
     public static String listOfAnswers;
     public static String thisUserAnswer;
-    public static int winningCard;
+    public static int winningCard = -1;
 }

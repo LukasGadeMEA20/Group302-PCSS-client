@@ -65,6 +65,7 @@ public class ClientRunnable implements Runnable {
                         }
                         Data.userNamesForList = FXCollections.observableArrayList(Data.userNames);
                         break;
+
                     case 2:
                         Data.lobbyChoice = 0;
                         prompt = fromServer.readUTF();
@@ -81,6 +82,7 @@ public class ClientRunnable implements Runnable {
                         boolean choiceMade = false;
                         while(!choiceMade){
                             if(Data.winningCard != -1){
+                                System.out.println("HEJ DET ER MIG!" + Data.winningCard);
                                 toServer.writeInt(Data.winningCard);
                                 choiceMade = true;
                             }

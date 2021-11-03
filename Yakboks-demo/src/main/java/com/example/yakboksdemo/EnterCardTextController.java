@@ -39,7 +39,6 @@ public class EnterCardTextController implements Initializable {
         app_stage.show();
     }
 
-
     public void onMainMenuClick(ActionEvent event) throws IOException {
         Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene2 = new Scene(scene_2_parent);
@@ -47,7 +46,6 @@ public class EnterCardTextController implements Initializable {
         app_stage.setScene(scene2);
         app_stage.show();
     }
-
 
     public void onSubmitClick(ActionEvent event) throws IOException {
         Data.submission = promptInput.getText();
@@ -59,10 +57,9 @@ public class EnterCardTextController implements Initializable {
 
     }
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            labelSubmission.setText(Data.kort);
+            labelSubmission.setText(Data.textToDisplay);
         }
     }
 
