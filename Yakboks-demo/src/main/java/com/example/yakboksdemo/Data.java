@@ -24,4 +24,9 @@ public class Data {
 
     public static String IP;
     public static int Port;
+
+    public static String textToDisplay;
+    public static String listOfAnswers;
+    public static String thisUserAnswer;
+    public static int winningCard;
 }
