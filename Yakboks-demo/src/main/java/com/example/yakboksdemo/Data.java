@@ -22,11 +22,16 @@ public class Data {
 
     public static boolean connected = false;
 
+    public static boolean gameRunning = true;
+
+    public static boolean displayList = false;
+
     public static String IP;
     public static int Port;
 
     public static String textToDisplay;
-    public static String listOfAnswers;
-    public static String thisUserAnswer;
+    public static ArrayList<String> listOfAnswers;
+    public static ObservableList<String> listOfAnswersForList = FXCollections.observableArrayList();
+
     public static int winningCard = -1;
 }

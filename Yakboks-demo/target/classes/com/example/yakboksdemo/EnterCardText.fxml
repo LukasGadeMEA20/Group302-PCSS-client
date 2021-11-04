@@ -20,7 +20,7 @@
         </ImageView>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" layoutX="645.0" layoutY="74.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="90.0" />
 
-        <Label id="output" fx:id="output" layoutX="931.0" layoutY="99.0" prefHeight="62.0" prefWidth="292.0" text="Yakboks" AnchorPane.leftAnchor="931.0" AnchorPane.topAnchor="99.0">
+        <Label id="output" fx:id="output" alignment="CENTER" layoutX="835.0" layoutY="99.0" prefHeight="62.0" prefWidth="292.0" text="Yakboks" AnchorPane.leftAnchor="835.0" AnchorPane.topAnchor="99.0">
             <font>
                 <Font size="37.0" />
             </font>
@@ -49,24 +49,39 @@
                 <ColorAdjust brightness="0.02" contrast="1.0" hue="-0.55" saturation="1.0" />
             </effect>
         </Button>
-      <Label fx:id="labelSubmission" alignment="TOP_CENTER" layoutX="691.0" layoutY="254.0" prefHeight="423.0" prefWidth="575.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="labelSubmission" alignment="TOP_CENTER" layoutX="691.0" layoutY="254.0" prefHeight="291.0" prefWidth="575.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99eeff" height="148.0" layoutX="691.0" layoutY="704.0" opacity="0.86" stroke="BLACK" strokeType="INSIDE" width="581.0" />
-      <TextField fx:id="input1" layoutX="782.0" layoutY="754.0" prefHeight="48.0" prefWidth="400.0" promptText="Enter text here..">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </TextField>
-      <Button layoutX="1369.0" layoutY="800.0" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="115.0" prefWidth="325.0" text="SUBMIT">
-         <font>
-            <Font size="39.0" />
-         </font>
-         <effect>
-            <ColorAdjust brightness="0.02" contrast="1.0" hue="-1.0" saturation="1.0" />
-         </effect>
-      </Button>
+        <Button layoutX="1369.0" layoutY="800.0" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="115.0" prefWidth="325.0" text="SUBMIT">
+            <font>
+                <Font size="39.0" />
+            </font>
+            <effect>
+                <ColorAdjust brightness="0.02" contrast="1.0" hue="-1.0" saturation="1.0" />
+            </effect>
+        </Button>
+      <Pane fx:id="playerUI" layoutX="691.0" layoutY="704.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99eeff" height="148.0" opacity="0.86" stroke="BLACK" strokeType="INSIDE" width="581.0" />
+            <TextField fx:id="promptInput" layoutX="91.0" layoutY="50.0" prefHeight="48.0" prefWidth="400.0" promptText="Enter text here..">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextField>
+
+         </children>
+      </Pane>
+      <Pane fx:id="cardCzarUI" layoutX="689.0" layoutY="549.0">
+         <children>
+            <ListView fx:id="myListView" layoutX="3.0" layoutY="53.0" prefHeight="249.0" prefWidth="575.0" style="-fx-background-color: transparent;-fx-font-size: 15.0" />
+            <Label alignment="CENTER" prefHeight="54.0" prefWidth="581.0" text="Please choose the answer you like the most" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
     </children>
 </AnchorPane>

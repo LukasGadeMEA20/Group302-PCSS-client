@@ -72,10 +72,14 @@ public class ClientRunnable implements Runnable {
                         Data.kort = prompt;
 
                         Data.textToDisplay = "Please wait while the other users write an answer for the prompt: \n" + Data.kort;
-                        System.out.println(Data.textToDisplay);
+                        //System.out.println(Data.textToDisplay);
 
-                        Data.listOfAnswers = fromServer.readUTF();
-                        System.out.println(Data.listOfAnswers);
+                        int size = fromServer.readInt();
+                        for(int i = 0; i < size; i++){
+                            Data.listOfAnswers.add(fromServer.readUTF());
+                        }
+
+                        Data.displayList = true;
 
                         toServer.flush();
 
@@ -104,13 +108,16 @@ public class ClientRunnable implements Runnable {
 
                         boolean userWritten = false;
                         while(!userWritten) {
-                            if (Data.thisUserAnswer.equals("")) {
-                                toServer.writeUTF(Data.thisUserAnswer);
+                            if (!Data.submission.equals("")) {
+                                toServer.writeUTF(Data.submission);
                                 userWritten = true;
                             }
                             Thread.sleep(2000);
                         }
-                        System.out.println(Data.thisUserAnswer);
+                        System.out.println(Data.submission);
+
+                        Data.textToDisplay = fromServer.readUTF();
+
 
                         break;
                     case 4:

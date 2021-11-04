@@ -1,5 +1,8 @@
 package com.example.yakboksdemo;
 
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.Parent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,12 +26,15 @@ public class EnterCardTextController implements Initializable {
     @FXML
     public Label labelSubmission;
 
+    @FXML
+    public Pane playerUI;
 
+    @FXML
+    public Pane cardCzarUI;
+    public ListView<String> myListView;
 
 
     @FXML
-
-
     public void onExitClick(ActionEvent event) {
         System.exit(1);
     }
@@ -49,17 +57,66 @@ public class EnterCardTextController implements Initializable {
 
     public void onSubmitClick(ActionEvent event) throws IOException {
         Data.submission = promptInput.getText();
+        /*
         Parent scene_8_parent = FXMLLoader.load(getClass().getResource("PromptAnswers.fxml"));
         Scene scene8 = new Scene(scene_8_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setScene(scene8);
-        app_stage.show();
-
+        app_stage.show();*/
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            labelSubmission.setText(Data.textToDisplay);
-        }
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(Data.gameRunning){
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            labelSubmission.setText(Data.textToDisplay);
+
+                            if(Data.isHost){
+                                setCardCzarUI();
+                            } else {
+                                setPlayerUI();
+                            }
+                        }
+
+                        public void setCardCzarUI(){
+                            playerUI.setVisible(false);
+
+                            // Only shows
+                            if(Data.displayList){
+                                cardCzarUI.setVisible(true);
+
+                                myListView.getItems().setAll(Data.listOfAnswersForList);
+
+                                myListView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+                                    @Override
+                                    public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                                        Data.winningCard = myListView.getSelectionModel().getSelectedIndex();
+                                    }
+                                });
+
+                            } else {
+                                cardCzarUI.setVisible(false);
+                            }
+                        }
+
+                        public void setPlayerUI(){
+                            playerUI.setVisible(true);
+                            cardCzarUI.setVisible(false);
+                        }
+                    });
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
+}
 

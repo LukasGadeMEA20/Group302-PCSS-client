@@ -2,6 +2,8 @@ package com.example.yakboksdemo;
 
 import javafx.application.Platform;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,7 +27,6 @@ import java.util.ResourceBundle;
 
 public class LobbyMenuController implements Initializable {
     @FXML
-    public Label labelUsername;
     public Button continueHostButton;
     public ListView<String> myListView;
 
@@ -63,13 +64,6 @@ public class LobbyMenuController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        if (Data.username.equals("")){
-            labelUsername.setText("");
-        }
-        else {
-            labelUsername.setText(Data.username);
-        }
 
         continueHostButton.setVisible(Data.isHost);
 
