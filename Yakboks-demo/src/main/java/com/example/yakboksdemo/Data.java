@@ -30,7 +30,7 @@ public class Data {
     public static int Port;
 
     public static String textToDisplay;
-    public static ArrayList<String> listOfAnswers;
+    public static ArrayList<String> listOfAnswers = new ArrayList<>();
     public static ObservableList<String> listOfAnswersForList = FXCollections.observableArrayList();
 
     public static int winningCard = -1;

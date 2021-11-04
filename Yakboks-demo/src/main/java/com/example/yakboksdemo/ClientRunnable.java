@@ -85,6 +85,7 @@ public class ClientRunnable implements Runnable {
                         for(int i = 0; i < size; i++){
                             Data.listOfAnswers.add(fromServer.readUTF());
                         }
+                        Data.listOfAnswersForList = FXCollections.observableArrayList(Data.listOfAnswers);
 
                         Data.displayList = true;
 
