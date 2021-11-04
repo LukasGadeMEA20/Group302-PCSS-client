@@ -74,6 +74,13 @@ public class ClientRunnable implements Runnable {
                         Data.textToDisplay = "Please wait while the other users write an answer for the prompt: \n" + Data.kort;
                         //System.out.println(Data.textToDisplay);
 
+                        boolean allReady = false;
+                        while(!allReady){
+                            if(fromServer.readBoolean()){
+                                allReady = true;
+                            }
+                        }
+
                         int size = fromServer.readInt();
                         for(int i = 0; i < size; i++){
                             Data.listOfAnswers.add(fromServer.readUTF());
