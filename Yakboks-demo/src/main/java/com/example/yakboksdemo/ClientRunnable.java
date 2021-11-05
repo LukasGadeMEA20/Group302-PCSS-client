@@ -101,6 +101,9 @@ public class ClientRunnable implements Runnable {
                             Thread.sleep(2000);
                         }
 
+                        String winCard = fromServer.readUTF();
+                        Data.textToDisplay = "The winner of this round is " + winCard;
+
                         break;
                     case 3:
                         if(Data.lobbyChoice != 0) {

@@ -31,7 +31,14 @@ public class Data {
 
     public static String textToDisplay;
     public static ArrayList<String> listOfAnswers = new ArrayList<>();
+    /*static{
+        listOfAnswers.add("test1");
+        listOfAnswers.add("test2");
+        listOfAnswers.add("test3");
+        listOfAnswers.add("test4");
+    }*/
     public static ObservableList<String> listOfAnswersForList = FXCollections.observableArrayList();
 
     public static int winningCard = -1;
+    public static int selectedCard = -1;
 }

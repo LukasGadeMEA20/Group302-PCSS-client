@@ -56,7 +56,12 @@ public class EnterCardTextController implements Initializable {
     }
 
     public void onSubmitClick(ActionEvent event) throws IOException {
-        Data.submission = promptInput.getText();
+        if(!Data.isHost){
+            Data.submission = promptInput.getText();
+        } else {
+            Data.winningCard = Data.selectedCard;
+        }
+
         /*
         Parent scene_8_parent = FXMLLoader.load(getClass().getResource("PromptAnswers.fxml"));
         Scene scene8 = new Scene(scene_8_parent);
@@ -95,12 +100,10 @@ public class EnterCardTextController implements Initializable {
                                 myListView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
                                     @Override
                                     public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                                        Data.winningCard = myListView.getSelectionModel().getSelectedIndex();
+                                        Data.selectedCard = myListView.getSelectionModel().getSelectedIndex();
                                     }
                                 });
-
-                            } else {
-                                cardCzarUI.setVisible(false);
+                                Data.displayList = false;
                             }
                         }
 

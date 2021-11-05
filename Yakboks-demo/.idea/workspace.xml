@@ -52,7 +52,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RunManager">
-    <configuration name="YakboksApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="YakboksApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.yakboksdemo.YakboksApplication" />
       <module name="Yakboks-demo" />
       <extension name="coverage">
