@@ -160,5 +160,6 @@ public class ClientRunnable implements Runnable {
 
         Data.winningCard = -1;
         Data.listOfAnswers = new ArrayList<>();
+        Data.submission = "";
     }
 }
