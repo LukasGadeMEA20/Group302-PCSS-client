@@ -10,9 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import javafx.scene.Node;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -62,11 +60,11 @@ public class PromptAnswersController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Data.submission.equals("")){
+        if (Data.userSubmission.equals("")){
             labelSubmission.setText("blank");
         }
         else{
-            labelSubmission.setText(Data.submission+Data.kort);
+            labelSubmission.setText(Data.userSubmission +Data.prompt);
 
         }
     }

@@ -5,16 +5,11 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,54 +29,35 @@ public class EnterCardTextController implements Initializable {
     public ListView<String> myListView;
 
 
+    // Exits the program.
     @FXML
     public void onExitClick(ActionEvent event) {
         System.exit(1);
     }
 
-    public void onReturnClick(ActionEvent event) throws IOException {
-        Parent scene_5_parent = FXMLLoader.load(getClass().getResource("NewCard.fxml"));
-        Scene scene5 = new Scene(scene_5_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene5);
-        app_stage.show();
-    }
-
-    public void onMainMenuClick(ActionEvent event) throws IOException {
-        Parent scene_2_parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        Scene scene2 = new Scene(scene_2_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene2);
-        app_stage.show();
-    }
-
+    // Submit button is different for the cardCzar and the other players.
     public void onSubmitClick(ActionEvent event) throws IOException {
-        if(!Data.isCardCzar){
-            Data.submission = promptInput.getText();
-            promptInput.clear();
-        } else {
+        if(Data.isCardCzar){ // If the user is the cardCzar, it will set the winning answer to be the answer they selected.
             Data.winningCard = Data.selectedCard;
+        } else { // For the other players it will take what they wrote and add it as their submission. Then it will clear the textfield.
+            Data.userSubmission = promptInput.getText();
+            promptInput.clear();
         }
-
-        /*
-        Parent scene_8_parent = FXMLLoader.load(getClass().getResource("PromptAnswers.fxml"));
-        Scene scene8 = new Scene(scene_8_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene8);
-        app_stage.show();*/
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // New thread for updating the game flow.
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(Data.gameRunning){
+                while(Data.gameRunning){ // As long as the game is running, it will update the UI with a Platform.runLater.
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
-                            labelSubmission.setText(Data.textToDisplay);
+                            labelSubmission.setText(Data.textToDisplay); // Updates the label on the screen to be whatever is needed.
 
+                            // Sets the rest of the UI based on if they are the cardCzar or one of the other players
                             if(Data.isCardCzar){
                                 setCardCzarUI();
                             } else {
@@ -90,29 +66,37 @@ public class EnterCardTextController implements Initializable {
                         }
 
                         public void setCardCzarUI(){
+                            // For the cardCzar ui we hide the player UI first
                             playerUI.setVisible(false);
 
-                            // Only shows
+                            // Then we show the cardCzar UI once the boolean displayList is true
+                            // It is set to true in the ClientRunnable thread, once everyone has sent in their answers.
                             if(Data.displayList){
-                                cardCzarUI.setVisible(true);
+                                cardCzarUI.setVisible(true); // UI
 
-                                myListView.getItems().setAll(Data.listOfAnswersForList);
+                                myListView.getItems().setAll(Data.listOfAnswersForList); // updates the list with the answers
 
+                                // Adds a listener to each element in the list, which reacts when clicked on.
                                 myListView.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
                                     @Override
                                     public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                                        Data.selectedCard = myListView.getSelectionModel().getSelectedIndex();
+                                        Data.selectedCard = myListView.getSelectionModel().getSelectedIndex(); // Sets the selectedCard based on the selection from the user.
+                                        // It does not send it right away, just so people do not accidentally click the wrong one, and sends it.
                                     }
                                 });
+                                // I cannot recall why I have this here, and I could not test what would happen if I removed it.
+                                // It might be very bad code, but I decided to leave it, as the program works fine ¯\_(ツ)_/¯
                                 Data.displayList = false;
                             }
                         }
 
+                        // The player UI is very simple, as it just hides and shows two different UI's.
                         public void setPlayerUI(){
-                            playerUI.setVisible(true);
                             cardCzarUI.setVisible(false);
+                            playerUI.setVisible(true);
                         }
                     });
+                    // TODO see if you can remove this or not. It should be removable, but it might fuck the code up.
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException e) {
@@ -120,6 +104,8 @@ public class EnterCardTextController implements Initializable {
                     }
                 }
 
+                // When the gameRunning is set to false, it will start this Platform.runLater thread which just shows who won,
+                // while hiding all unnecessary stuff.
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -128,7 +114,6 @@ public class EnterCardTextController implements Initializable {
                         cardCzarUI.setVisible(false);
                     }
                 });
-                // Change screen to ending screen.
             }
         }).start();
     }

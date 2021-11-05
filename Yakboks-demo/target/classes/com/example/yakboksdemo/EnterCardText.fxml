@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -25,42 +24,21 @@
                 <Font size="37.0" />
             </font>
         </Label>
-        <Button graphicTextGap="0.0" layoutX="1395.0" layoutY="117.0" mnemonicParsing="false" onAction="#onExitClick" prefHeight="62.0" prefWidth="259.0" text="Exit game" textAlignment="CENTER" AnchorPane.leftAnchor="1395.0" AnchorPane.topAnchor="117.0">
+        <Button graphicTextGap="0.0" layoutX="1395.0" layoutY="117.0" mnemonicParsing="false" onAction="#onExitClick" opacity="0.8" prefHeight="62.0" prefWidth="259.0" style="-fx-background-color: #FF0000;" text="Exit game" textAlignment="CENTER" AnchorPane.leftAnchor="1395.0" AnchorPane.topAnchor="117.0">
             <font>
                 <Font size="34.0" />
             </font>
-            <effect>
-                <ColorAdjust saturation="1.0" />
-            </effect></Button>
-        <Button layoutX="203.0" layoutY="123.0" mnemonicParsing="false" onAction="#onMainMenuClick" prefHeight="62.0" prefWidth="259.0" text="Main  Menu">
-            <effect>
-                <ColorAdjust contrast="0.01" hue="-0.89" saturation="1.0" />
-            </effect>
-            <font>
-                <Font size="27.0" />
-            </font>
         </Button>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="619.0" layoutX="678.0" layoutY="239.0" opacity="0.71" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="605.0" />
-        <Button layoutX="287.0" layoutY="800.0" mnemonicParsing="false" onAction="#onReturnClick" prefHeight="115.0" prefWidth="325.0" text="RETURN">
-            <font>
-                <Font size="39.0" />
-            </font>
-            <effect>
-                <ColorAdjust brightness="0.02" contrast="1.0" hue="-0.55" saturation="1.0" />
-            </effect>
-        </Button>
       <Label fx:id="labelSubmission" alignment="TOP_CENTER" layoutX="691.0" layoutY="254.0" prefHeight="291.0" prefWidth="575.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-        <Button layoutX="1369.0" layoutY="800.0" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="115.0" prefWidth="325.0" text="SUBMIT">
+        <Button graphicTextGap="0.0" layoutX="1369.0" layoutY="800.0" mnemonicParsing="false" onAction="#onSubmitClick" opacity="0.8" prefHeight="115.0" prefWidth="325.0" style="-fx-background-color: #05FFFF;" text="Submit" textAlignment="CENTER" AnchorPane.leftAnchor="1369.0" AnchorPane.topAnchor="800.0">
             <font>
-                <Font size="39.0" />
+                <Font size="34.0" />
             </font>
-            <effect>
-                <ColorAdjust brightness="0.02" contrast="1.0" hue="-1.0" saturation="1.0" />
-            </effect>
         </Button>
       <Pane fx:id="playerUI" layoutX="691.0" layoutY="704.0">
          <children>
