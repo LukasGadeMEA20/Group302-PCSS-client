@@ -42,14 +42,6 @@ public class LobbyMenuController implements Initializable {
         }
     }
 
-    public void onRefreshClick(ActionEvent event) throws IOException {
-        Parent scene_3_parent = FXMLLoader.load(getClass().getResource("LobbyMenu.fxml"));
-        Scene scene3 = new Scene(scene_3_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setScene(scene3);
-        app_stage.show();
-    }
-
     public void onExitClick(ActionEvent event) {
         System.exit(1);
     }
@@ -62,6 +54,7 @@ public class LobbyMenuController implements Initializable {
         app_stage.setScene(scene2);
         app_stage.show();
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -98,7 +91,7 @@ public class LobbyMenuController implements Initializable {
                                 }
                             });
 
-                            Thread.sleep(2000);
+                            Thread.sleep(500);
                         } else if (Data.lobbyChoice == 0){
                             checker = false;
                             Platform.runLater(new Runnable() {
@@ -117,8 +110,8 @@ public class LobbyMenuController implements Initializable {
                             });
                         } else {
                             System.out.println("Connecting"+dot);
-                            dot+=dot;
-                            Thread.sleep(2000);
+                            dot+=".";
+                            Thread.sleep(500);
                         }
                     }
                 } catch (InterruptedException e){

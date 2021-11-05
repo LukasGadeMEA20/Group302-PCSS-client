@@ -55,6 +55,8 @@ public class ClientRunnable implements Runnable {
                             }
                             Data.userNamesForList = FXCollections.observableArrayList(Data.userNames);
                         }
+                        System.out.println(Data.userNames.toString());
+                        Thread.sleep(500);
 
                         break;
                     case 1:
@@ -141,6 +143,7 @@ public class ClientRunnable implements Runnable {
                     case 4:
                         Data.textToDisplay = fromServer.readUTF();
                         Data.gameRunning = false;
+                        connect = false;
                         //System.out.println(fromServer.readUTF());
                         break;
                 }
