@@ -81,7 +81,7 @@ public class EnterCardTextController implements Initializable {
                         public void run() {
                             labelSubmission.setText(Data.textToDisplay);
 
-                            if(Data.isHost){
+                            if(Data.isCardCzar){
                                 setCardCzarUI();
                             } else {
                                 setPlayerUI();

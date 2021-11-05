@@ -68,6 +68,7 @@ public class ClientRunnable implements Runnable {
 
                     case 2:
                         Data.lobbyChoice = 0;
+                        Data.isCardCzar = true;
                         prompt = fromServer.readUTF();
                         Data.kort = prompt;
 
@@ -109,6 +110,8 @@ public class ClientRunnable implements Runnable {
                         if(Data.lobbyChoice != 0) {
                             Data.lobbyChoice = 0;
                         }
+
+                        Data.isCardCzar = true;
 
                         prompt = fromServer.readUTF();
 
