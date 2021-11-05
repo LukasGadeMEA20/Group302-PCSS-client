@@ -56,8 +56,9 @@ public class EnterCardTextController implements Initializable {
     }
 
     public void onSubmitClick(ActionEvent event) throws IOException {
-        if(!Data.isHost){
+        if(!Data.isCardCzar){
             Data.submission = promptInput.getText();
+            promptInput.clear();
         } else {
             Data.winningCard = Data.selectedCard;
         }
@@ -118,6 +119,16 @@ public class EnterCardTextController implements Initializable {
                         e.printStackTrace();
                     }
                 }
+
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        labelSubmission.setText(Data.textToDisplay);
+                        playerUI.setVisible(false);
+                        cardCzarUI.setVisible(false);
+                    }
+                });
+                // Change screen to ending screen.
             }
         }).start();
     }

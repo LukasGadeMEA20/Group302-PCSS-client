@@ -67,14 +67,20 @@ public class ClientRunnable implements Runnable {
                         break;
 
                     case 2:
-                        Data.lobbyChoice = 0;
+                        startNewRound();
+
+                        // This case is the cardczar case, which means the below is set to be true.
                         Data.isCardCzar = true;
+
+                        // Reads the prompt from the server and sets it in the data.
                         prompt = fromServer.readUTF();
                         Data.kort = prompt;
 
+                        // Sets the text to display
                         Data.textToDisplay = "Please wait while the other users write an answer for the prompt: \n" + Data.kort;
                         //System.out.println(Data.textToDisplay);
 
+                        //
                         boolean allReady = false;
                         while(!allReady){
                             if(fromServer.readBoolean()){
@@ -107,11 +113,8 @@ public class ClientRunnable implements Runnable {
 
                         break;
                     case 3:
-                        if(Data.lobbyChoice != 0) {
-                            Data.lobbyChoice = 0;
-                        }
-
-                        Data.isCardCzar = true;
+                        startNewRound();
+                        Data.isCardCzar = false;
 
                         prompt = fromServer.readUTF();
 
@@ -126,16 +129,18 @@ public class ClientRunnable implements Runnable {
                                 toServer.writeUTF(Data.submission);
                                 userWritten = true;
                             }
-                            Thread.sleep(2000);
+                            Thread.sleep(500);
                         }
                         System.out.println(Data.submission);
 
                         Data.textToDisplay = fromServer.readUTF();
-
+                        System.out.println(Data.textToDisplay);
 
                         break;
                     case 4:
-                        System.out.println(fromServer.readUTF());
+                        Data.textToDisplay = fromServer.readUTF();
+                        Data.gameRunning = false;
+                        //System.out.println(fromServer.readUTF());
                         break;
                 }
                 toServer.flush();
@@ -146,5 +151,14 @@ public class ClientRunnable implements Runnable {
         } catch(IOException | InterruptedException e){
             System.out.println(e.toString());
         }
+    }
+
+    public void startNewRound(){
+        if(Data.lobbyChoice != 0) {
+            Data.lobbyChoice = 0;
+        }
+
+        Data.winningCard = -1;
+        Data.listOfAnswers = new ArrayList<>();
     }
 }
