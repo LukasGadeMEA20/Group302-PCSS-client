@@ -67,6 +67,7 @@ public class ClientRunnable implements Runnable {
                         break;
 
                     case 2:
+                        System.out.println("YOU ARE CZAR");
                         startNewRound();
 
                         // This case is the cardczar case, which means the below is set to be true.
@@ -105,7 +106,7 @@ public class ClientRunnable implements Runnable {
                                 toServer.writeInt(Data.winningCard);
                                 choiceMade = true;
                             }
-                            Thread.sleep(2000);
+                            Thread.sleep(500);
                         }
 
                         String winCard = fromServer.readUTF();
