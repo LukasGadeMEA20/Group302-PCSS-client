@@ -5,7 +5,7 @@ This is the client side for the game, which is what will be used for actually pl
 
 The client will ask you for you your username, IP and port when needed. 
 
-There is one bug with the program in which sometimes it will take the asnwer a user has submitted - so if the program stops going and the card czar dpoesn't get a new answer just write a new answer again and it should fix it.
+There is one bug with the program in which sometimes it will not take the answer a user has submitted - so if the program stops going and the card czar dpoesn't get a new answer just write a new answer again and it should fix it.
 
 The client-side of the game can be found here: https://github.com/LukasGadeMEA20/Group302-PCSS-client
 
