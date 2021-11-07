@@ -7,7 +7,7 @@ The client will ask you for you your username, IP and port when needed.
 
 There is one bug with the program in which sometimes it will not take the answer a user has submitted - so if the program stops going and the Card Czar doesn't get a new answer just write the new answer again and it should fix it.
 
-The client-side of the game can be found here: https://github.com/LukasGadeMEA20/Group302-PCSS-client
+The server-side of the game can be found here: https://github.com/LukasGadeMEA20/Group302-PCSS-server
 
 The client side is developed by August V. Clarkfeldt, Bjørn Troldahl, Christopher Reimers, Daniel S. Rossing, Lukas G. Ravnsborg, Mikkel S. Lauridsen
 
@@ -20,9 +20,12 @@ Step 3: In IntelliJ IDEA, press File > Open... and locate the folder and click O
 
 Step 4: Locate ```YakboksApplication``` under src > java > com.example.yakboksdemo > ... and run it.
 
-Step 5: When the server is running, it will print a line of text in the console which includes the IP-address, the port and what time it started running.  
-Example: Server IP: ```123.45.678.90``` Port: ```8000```
+Step 5: Now you can enter your User name you wish to have, capped to 12 symbols.
 
-Step 6: Write down the IP-address and port. These are used for the clients to connect to the server and join the game.
+Step 6: Then you will have to connect to the server. To setup the server, go to the [server-side GitHub page](https://github.com/LukasGadeMEA20/Group302-PCSS-server) and follow the instructions there.
 
-Step 7: Play the game! To join the server, go to the [client-side GitHub page](https://github.com/LukasGadeMEA20/Group302-PCSS-client) and follow the instructions there.
+Step 7: Enter the IP-address and port from the server and you should be able to connect!
+
+Step 8: The first user who has started the lobby will be able to start the game.
+
+Step 9: The game should give you sufficient instructions on how to play the game, and once you are done, you can just exit the application and open it up again!
